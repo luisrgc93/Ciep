@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">estu@pp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="spinner_title">Situacion</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="salir">Salir</string>
+    <string name="menu">Menú</string>
+    <string name="guardar">Guardar</string>
+    <string name="datos">Datos del Usuario</string>
+    <string name="menuguia1">Submenu Guia 1</string>
+    <string name="menuguia3">Submenu Guia 3</string>
+    <string name="menuguia5">Submenu Guia 5</string>
+    <string name="menuguia6">Submenu Guia 6</string>
+    <string name="menuguia7">Submenu Guia 7</string>
+    <string name="menuguia8">Submenu Guia 8</string>
+    <string name="menuguia9">Submenu Guia 9</string>
+    <string name="menuguia10">Submenu Guia 10</string>
+    <string name="menuguia11">Submenu Guia 11</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

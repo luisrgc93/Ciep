@@ -1,0 +1,120 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/cerrar_sesion"
+        android:title="@string/cerrar_sesion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/datos"
+        android:title="@string/datos"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menuguia1"
+        android:title="@string/menuguia1"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias1"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia3"
+        android:title="@string/menuguia3"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias3"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia5"
+        android:title="@string/menuguia5"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias5"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia6"
+        android:title="@string/menuguia6"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias6"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia7"
+        android:title="@string/menuguia7"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias7"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia8"
+        android:title="@string/menuguia8"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_inicio"
+                android:title="@string/menu"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item android:id="@+id/guarda_datosnum"
+                android:title="@string/guardar"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item android:id="@+id/regresa_guias8"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia11"
+        android:title="@string/menuguia11"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias11"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia9"
+        android:title="@string/menuguia9"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias9"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@+id/menuguia10"
+        android:title="@string/menuguia10"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/regresa_guias10"
+                android:title="@string/salir"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="20"
+        android:background="#ffffffff">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView3"
+            android:layout_weight="3" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="20"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\nTema:\nParticipación en foros virtuales\nReferencias:\n"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:textIsSelectable="true"
+                    android:id="@+id/textView2"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4.5"
+                    android:weightSum="20">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="9.5">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="70dp"
+                            android:text="Carlos, B. (2000). ¿Como lograr una educación de calidad: Qué nos enseñan las escuelas? Red de Restructuración y Competitividad. División de Desarrolo Productivo y Empresarial.\nRecuperado de"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="normal|bold"
+                            android:textIsSelectable="true"
+                            android:id="@+id/textView4"
+                            android:textColorLink="#3354b4"
+                            android:linksClickable="false"
+                            android:password="false"
+                            android:textSize="12dp"
+                            android:layout_weight="0.16" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="http://www.eclac.cl/publicaciones/xml/9/5669/lcl1279e.pdf\n"
+                            android:id="@+id/textView5"
+                            android:linksClickable="true"
+                            android:autoLink="web"
+                            android:autoText="false"
+                            android:textSize="12dp"
+                            android:layout_weight="0.21" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="López, G. (2008). [La enseñanzade Idiomas en México en la Reunión Nacional de Control Escolar Presentación de PowerPoint 2008]. La Enseñanza de Idiomas en México: Enseñanza y Certificación de Idiomas.\nRecuperado de\n"
+                            android:id="@+id/textView6"
+                            android:layout_weight="0.78"
+                            android:textStyle="normal|bold"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="http://www.slideshare.net/jeancabe730605/la-enseanza-de-idiomas-en-mexico\n"
+                            android:id="@+id/textView7"
+                            android:textSize="12dp"
+                            android:linksClickable="true"
+                            android:autoLink="web" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Martin, F. (2010). A vuektas con la globalozacion del inglés: expectativas y paradojas. Historia Y Comunicación Social, 15 27 - 45.\n\nPereira, S. (2009).[La importancia del inglés a nivel mundial presentación de Power Point 2009]. Why is important to study Englis?\nRecuperado de"
+                            android:id="@+id/textView8"
+                            android:textSize="12dp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="http://www.slideshare.net/TeacherCleve"
+                            android:id="@+id/textView9"
+                            android:autoLink="web"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5"></LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="20"
+                    android:layout_weight="4.5">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imagen1_pantalla5_importanciadelingles" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5"></LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="17"
+            android:weightSum="20" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9.5" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:weightSum="10" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:id="@+id/anterior_pantalla5_importanciadelingles"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imagen2_pantalla5_importanciadelingles" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:onClick="onClick"
+                    android:id="@+id/salir_importanciadelingles">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imagen3_pantalla5_importanciadelingles"
+                        android:longClickable="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9.5" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

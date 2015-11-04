@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="#ffffffff">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="6">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imagen1_pantalla14_capacidadesparaelaprendizaje" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:weightSum="9">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imagen2_pantalla14_capacidadesparaelaprendizaje"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"
+                    android:weightSum="10">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="4.5">
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:weightSum="8">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen3_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen4_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen5_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen6_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen7_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen8_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen9_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/imagen10_pantalla14_capacidadesparaelaprendizaje"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="4.5">
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:id="@+id/imagen11_pantalla14_capacidadesparaelaprendizaje"
+                android:layout_weight="6" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
