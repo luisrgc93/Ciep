@@ -29,16 +29,15 @@
                     android:layout_weight="9.5"></LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:weightSum="1">
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="fill_parent"
-                        android:layout_height="450dp"
+                        android:layout_height="500dp"
                         android:id="@+id/imagen1_pantalla17_frances" />
                 </LinearLayout>
 

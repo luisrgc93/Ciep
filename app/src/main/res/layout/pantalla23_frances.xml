@@ -74,34 +74,30 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:id="@+id/anterior_pantalla23_frances"
-                    android:onClick="onClick">
+                    android:layout_weight="4.5">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/boton_anterior_frances" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"></LinearLayout>
+                    android:layout_weight="1"
+                    android:id="@+id/Salir_frances"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/Salir_Frances" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:id="@+id/salir_pantalla23_frances"
-                    android:onClick="onClick">
+                    android:layout_weight="4.5">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/boton_siguiente_frances" />
                 </LinearLayout>
             </LinearLayout>
 

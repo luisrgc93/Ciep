@@ -40,18 +40,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Caracteristicas del idioma francés"
+                        android:text="Evaluación y practica\n"
                         android:id="@+id/textView15"
                         android:textColor="#000000"
                         android:textSize="12dp"
                         android:textIsSelectable="true"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp" />
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="2.- Su estructura\n"
+                        android:text="¿Qué tanto he aprendido del francés?\n"
                         android:id="@+id/textView16"
                         android:textColor="#000000"
                         android:textIsSelectable="true"
@@ -62,7 +63,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="En cuanto a la pronunciación del francés en comparación con el español, existen algunos cambios considerables a tomar en cuenta en. El alfabeto francés y el español son muy parecidos, sólo la letra “ñ” no existe en el alfabeto francés, sin embargo su sonido es representado por el conjunto de “gn”  como en el caso de la palabra “champagne”.  Y en el caso del sonido en español de “ch” en francés se pronuncia siempre como si en español fuera un el conjunto de “sh”, de manera que la palabra mencionada arriba se escucha.\n\n Aunque la mayoría de las vocales y consonantes se pronuncian igual, hay algunos cambios a la hora de pronunciar según la posición de las letras en una palabra o frase. "
+                        android:text="Por otro lado, para preguntar el nombre de manera informal utilizaremos las siguientes frases:\n"
                         android:id="@+id/textView17"
                         android:textIsSelectable="true"
                         android:textSize="12dp"
@@ -72,12 +73,14 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="\nPor ejemplo:\n"
+                        android:text="Tu t’appelles comment?"
                         android:id="@+id/textView18"
                         android:textSize="12dp"
-                        android:textColor="#000000" />
+                        android:textColor="#2c67ab"
+                        android:autoText="false"
+                        android:gravity="center" />
 
-                    <TextView
+                    TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -88,115 +91,131 @@
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="10">
 
                         <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"></LinearLayout>
+
+                        <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="37dp"
-                            android:layout_weight="8"></LinearLayout>
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4"></LinearLayout>
 
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="2"></LinearLayout>
+                            android:layout_weight="3"></LinearLayout>
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="2.-Oi = se pronuncia como el sonido “wa” en español  "
+                        android:text="Y podemos responder de las siguientes maneras:\n"
                         android:id="@+id/textView20"
                         android:textColor="#000000"
                         android:textSize="12dp" />
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="10" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="37dp"
-                            android:layout_weight="8" />
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2" />
-                    </LinearLayout>
-
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="3.-Au= se pronuncia como nuestro sonido “o”"
+                        android:text="Je m’appelle Carlos et toi?  "
                         android:id="@+id/textView21"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
+                        android:textColor="#2c67ab"
+                        android:textSize="12dp"
+                        android:gravity="center" />
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="10" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="37dp"
-                            android:layout_weight="8" />
 
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="2" />
+                            android:layout_weight="3" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3" />
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="4.-Ou= se pronuncia como el sonido de nuestra “u”"
+                        android:text="O"
                         android:id="@+id/textView22"
                         android:textColor="#000000"
-                        android:textSize="12dp" />
+                        android:textSize="12dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Je suis Carlos et toi ? "
+                        android:id="@+id/textView38"
+                        android:textColor="#2c67ab"
+                        android:textSize="12dp"
+                        android:gravity="center" />
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="10" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="37dp"
-                            android:layout_weight="8" />
 
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="2" />
+                            android:layout_weight="3" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3" />
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Estos y otros cambios considerables verá a medida que usted avance en su aprendizaje del francés.\n\n ¡No se desmotive! si usted habla español, el francés le resultará sencillo de entender con la práctica. "
+                        android:text="La pregunta significa “¿cómo te llamas tú?” y La única modificación que se tiene que realizar en la forma de responder sería en la parte final, siendo “et vous?” cuando es formal, y “et toi?” en los contextos informales.\n"
                         android:id="@+id/textView23"
                         android:textColor="#000000"
                         android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/imagen1_pantalla20_frances" />
 
                 </LinearLayout>
 

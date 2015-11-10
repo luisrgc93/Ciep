@@ -232,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen1_pantalla23_frances;
     ImageView boton_siguiente_frances;
     ImageView boton_anterior_frances;
+    ImageView Salir_Frances;
     ImageView imagen_bocina;
 
 
@@ -1530,6 +1531,11 @@ FragmentManager fm;
         if(ventana_frances == 20)
         {
             setContentView(R.layout.pantalla20_frances);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/ilustracion1_pantalla20_frances.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla20_frances = (ImageView) findViewById(R.id.imagen1_pantalla20_frances);
+            imagen1_pantalla20_frances.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_siguiente_frances.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
@@ -1569,24 +1575,18 @@ FragmentManager fm;
             boton_anterior_frances = (ImageView) findViewById(R.id.boton_anterior_frances);
             boton_anterior_frances.setBackgroundDrawable(bmDrawable);
         }
-        if(ventana_frances == 23)
-        {
+        if(ventana_frances == 23) {
             setContentView(R.layout.pantalla23_frances);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/ilustracion1_pantalla23_frances.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
             imagen1_pantalla23_frances = (ImageView) findViewById(R.id.imagen1_pantalla23_frances);
             imagen1_pantalla23_frances.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_siguiente_frances.zip");
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_salir_frances.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            boton_siguiente_frances = (ImageView) findViewById(R.id.boton_siguiente_frances);
-            boton_siguiente_frances.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_anterior_frances.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            boton_anterior_frances = (ImageView) findViewById(R.id.boton_anterior_frances);
-            boton_anterior_frances.setBackgroundDrawable(bmDrawable);
+            Salir_Frances = (ImageView) findViewById(R.id.Salir_Frances);
+            Salir_Frances.setBackgroundDrawable(bmDrawable);
         }
 
     }
@@ -4224,19 +4224,13 @@ FragmentManager fm;
                 descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/s4j3fnsyd4p7ojo/ilustracion1_pantalla11_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla11_frances.zip";
-                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/h3qw2g3359dufiv/ilustracion1_pantalla14_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla14_frances.zip";
-                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/dvf7juumd56808a/ilustracion1_pantalla17_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla17_frances.zip";
-                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                url = "https://dl.dropbox.com/s/h5ytn087bjmxxvz/ilustracion1_pantalla19_frances.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla19_frances.zip";
-                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                url = "https://dl.dropbox.com/s/td76xa37eic1e8t/bocina.png?dl=0";
-                nomarchivo = "bocina.zip";
-                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                descargar(rutaarchivos, url, nomarchivo);
             }
             else
             {
@@ -4282,6 +4276,12 @@ FragmentManager fm;
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
+                url = "https://dl.dropbox.com/s/cxh23gk6jnacqix/ilustracion1_pantalla3_frances.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla3_frances.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
                 url = "https://dl.dropbox.com/s/02gd45dc9icayf4/ilustracion1_pantalla4_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla4_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -4318,6 +4318,12 @@ FragmentManager fm;
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
+                url = "https://dl.dropbox.com/s/s4j3fnsyd4p7ojo/ilustracion1_pantalla11_frances.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla11_frances.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
                 url = "https://dl.dropbox.com/s/qhqs1rutkbeymqu/ilustracion1_pantalla12_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla12_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -4328,6 +4334,13 @@ FragmentManager fm;
                 nomarchivo = "ilustracion1_pantalla13_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
                 if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
+                url = "https://dl.dropbox.com/s/h3qw2g3359dufiv/ilustracion1_pantalla14_frances.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla14_frances.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if(!dir.exists())
+                {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/vacqc3do319s2x8/ilustracion1_pantalla15_frances.png?dl=0";
@@ -4342,6 +4355,13 @@ FragmentManager fm;
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
+                url = "https://dl.dropbox.com/s/dvf7juumd56808a/ilustracion1_pantalla17_frances.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla17_frances.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if(!dir.exists())
+                {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
                 url = "https://dl.dropbox.com/s/it1268wx3czcf1l/ilustracion1_pantalla18_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla18_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -4351,7 +4371,8 @@ FragmentManager fm;
                 url = "https://dl.dropbox.com/s/h5ytn087bjmxxvz/ilustracion1_pantalla19_frances.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla19_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if (!dir.exists()) {
+                if(!dir.exists())
+                {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/1iut4or4vu0pvte/ilustracion1_pantalla20_frances.png?dl=0";
@@ -4454,33 +4475,6 @@ FragmentManager fm;
                 nomarchivo = "portada_frances.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
                 if (!dir.exists()) {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/s4j3fnsyd4p7ojo/ilustracion1_pantalla11_frances.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla11_frances.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if (!dir.exists()) {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/h3qw2g3359dufiv/ilustracion1_pantalla14_frances.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla14_frances.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists())
-                {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/dvf7juumd56808a/ilustracion1_pantalla17_frances.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla17_frances.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists())
-                {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/h5ytn087bjmxxvz/ilustracion1_pantalla19_frances.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla19_frances.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists())
-                {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
             }
@@ -7514,13 +7508,7 @@ FragmentManager fm;
         File dir;
         if(numguia==1){
             rutaarchivos="/.estu@pp/guia1/";
-
             nomarchivo = "bienvenida_frances.zip";
-            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-            if(dir.exists()){
-                ar++;
-            }
-            nomarchivo = "bocina.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
             if(dir.exists()){
                 ar++;
@@ -7557,7 +7545,8 @@ FragmentManager fm;
             }
             nomarchivo = "ilustracion1_pantalla3_frances.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-            if(dir.exists()){
+            if(dir.exists())
+            {
                 ar++;
             }
             nomarchivo = "ilustracion1_pantalla4_frances.zip";
@@ -7728,6 +7717,7 @@ FragmentManager fm;
             {
                 ar++;
             }
+
         }
         if(numguia==3){
             rutaarchivos="/.estu@pp/guia3/";
@@ -9408,7 +9398,7 @@ FragmentManager fm;
         }
     }
 
-    public void AlertaDatosLoggeoMayor(){
+    public void AlertaDatosLoggeoMayor() {
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle("Descarga de archivos");
         alertDialog.setMessage("Estas utilizando tus datos moviles.\n¿Deseas continuar con la conexión?");
@@ -9432,7 +9422,7 @@ FragmentManager fm;
         alertDialog.show();
     }
 
-    public void AlertaDatosLoggeoMenor(){
+    public void AlertaDatosLoggeoMenor() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle("Descarga de archivos");
         alertDialog.setMessage("Estas utilizando tus datos moviles.\n¿Deseas continuar con la conexión?");
@@ -9451,206 +9441,204 @@ FragmentManager fm;
         alertDialog.show();
     }
 
-    public void AlertaDatosDescargaMayor(){
+    public void AlertaDatosDescargaMayor() {
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle("Descarga de archivos");
         alertDialog.setMessage("Estas utilizando tus datos moviles.\n¿Deseas continuar con la descarga?");
         alertDialog.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
-                if(numguia==1){
+                if (numguia == 1) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=41){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 41) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==41){
+                        if (numar == 41) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_frances=1;
+                            ventana_frances = 1;
                             validaVentana1();
                         }
                     }
                 }
-                if(numguia==3){
+                if (numguia == 3) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=45){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 45) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==45){
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_administraciondeltiempo=1;
+                            ventana_administraciondeltiempo = 1;
                             validaVentana3();
                         }
                     }
                 }
-                if(numguia==5){
+                if (numguia == 5) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=31){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 31) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==31){
+                        if (numar == 31) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_estres=1;
+                            ventana_estres = 1;
                             validaVentana5();
                         }
                     }
                 }
-                if(numguia==6){
+                if (numguia == 6) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=42){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 42) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==42){
+                        if (numar == 42) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_mapasmentales=1;
+                            ventana_mapasmentales = 1;
                             validaVentana6();
                         }
                     }
                 }
-                if(numguia==7){
+                if (numguia == 7) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=50){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 50) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==50){
+                        if (numar == 50) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_importanciadelingles=1;
+                            ventana_importanciadelingles = 1;
                             validaVentana7();
                         }
                     }
                 }
-                if(numguia==8){
+                if (numguia == 8) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=44){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 44) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==44){
+                        if (numar == 44) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            if(!guardadatosnum.exists())
-                            {
-                                numaudguia8=1;
-                                ventana_datosnum=1;
+                            if (!guardadatosnum.exists()) {
+                                numaudguia8 = 1;
+                                ventana_datosnum = 1;
                                 validaVentana8();
                                 validaudio(ventana_datosnum);
-                            }
-                            else{
+                            } else {
                                 inicio_datosnum();
                             }
                         }
                     }
                 }
-                if(numguia==9){
+                if (numguia == 9) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=45){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 45) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==45){
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_capacidades=1;
+                            ventana_capacidades = 1;
                             validaVentana9();
                         }
                     }
                 }
-                if(numguia==10){
+                if (numguia == 10) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=23){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 23) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==23){
+                        if (numar == 23) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_habilidadesdelectura=1;
+                            ventana_habilidadesdelectura = 1;
                             validaVentana10();
                         }
                     }
                 }
-                if(numguia==11){
+                if (numguia == 11) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=30){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 30) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==30){
+                        if (numar == 30) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_foros=1;
+                            ventana_foros = 1;
                             validaVentana11();
                         }
                     }
@@ -9660,7 +9648,7 @@ FragmentManager fm;
         alertDialog.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
-                numguia=0;
+                numguia = 0;
             }
         });
         alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -9678,199 +9666,197 @@ FragmentManager fm;
         alertDialog.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
-                if(numguia==1){
+                if (numguia == 1) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=41){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar!=41) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==41){
+                        if (numar==41) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_frances=1;
+                            ventana_frances = 1;
                             validaVentana1();
                         }
                     }
                 }
-                if(numguia==3){
+                if (numguia == 3) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=45){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 45) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==45){
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_administraciondeltiempo=1;
+                            ventana_administraciondeltiempo = 1;
                             validaVentana3();
                         }
                     }
                 }
-                if(numguia==5){
+                if (numguia == 5) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=31){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 31) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==31){
+                        if (numar == 31) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_estres=1;
+                            ventana_estres = 1;
                             validaVentana5();
                         }
                     }
                 }
-                if(numguia==6){
+                if (numguia == 6) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=42){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 42) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==42){
+                        if (numar == 42) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_mapasmentales=1;
+                            ventana_mapasmentales = 1;
                             validaVentana6();
                         }
                     }
                 }
-                if(numguia==7){
+                if (numguia == 7) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=50){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 50) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==50){
+                        if (numar == 50) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_importanciadelingles=1;
+                            ventana_importanciadelingles = 1;
                             validaVentana7();
                         }
                     }
                 }
-                if(numguia==8){
+                if (numguia == 8) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=44){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 44) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==44){
+                        if (numar == 44) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            if(!guardadatosnum.exists())
-                            {
-                                numaudguia8=1;
-                                ventana_datosnum=1;
+                            if (!guardadatosnum.exists()) {
+                                numaudguia8 = 1;
+                                ventana_datosnum = 1;
                                 validaVentana8();
                                 validaudio(ventana_datosnum);
-                            }
-                            else{
+                            } else {
                                 inicio_datosnum();
                             }
                         }
                     }
                 }
-                if(numguia==9){
+                if (numguia == 9) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=45){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 45) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==45){
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_capacidades=1;
+                            ventana_capacidades = 1;
                             validaVentana9();
                         }
                     }
                 }
-                if(numguia==10){
+                if (numguia == 10) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=23){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 23) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==23){
+                        if (numar == 23) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_habilidadesdelectura=1;
+                            ventana_habilidadesdelectura = 1;
                             validaVentana10();
                         }
                     }
                 }
-                if(numguia==11){
+                if (numguia == 11) {
                     mensaje(1);
-                    guia=true;
-                    descarga=dropbox();
-                    if(descarga==true){
-                        numar=validaArchivos();
-                        while(numar!=30){
-                            numar=validaArchivos();
+                    guia = true;
+                    descarga = dropbox();
+                    if (descarga == true) {
+                        numar = validaArchivos();
+                        while (numar != 30) {
+                            numar = validaArchivos();
                         }
                         mensaje(2);
-                        if(numar==30){
+                        if (numar == 30) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            ventana_foros=1;
+                            ventana_foros = 1;
                             validaVentana11();
                         }
                     }
@@ -10926,41 +10912,52 @@ FragmentManager fm;
                 numguia=1;
                 numar=0;
                 numar=validaArchivos();
-                if(numar==41){
+                if(numar==41)
+                {
                     guia=true;
                     titulo(numguia);
                     ventana_frances=1;
                     validaVentana1();
                 }
-                else{
-                    if(estaConectado()){
-                        if(!conectadoRedMovil()){
+                else
+                {
+                    if(estaConectado())
+                    {
+                        if(!conectadoRedMovil())
+                        {
                             mensaje(1);
                             guia=true;
                             descarga=dropbox();
-                            if(descarga==true){
+                            if(descarga==true)
+                            {
                                 numar=validaArchivos();
-                                while(numar!=41){
+                                while(numar!=41)
+                                {
                                     numar=validaArchivos();
                                 }
                                 mensaje(2);
-                                if(numar==41){
+                                if(numar==41)
+                                {
                                     titulo(numguia);
                                     ventana_frances=1;
                                     validaVentana1();
                                 }
                             }
                         }
-                        else{
-                            if(validaVersion()==true){
+                        else
+                        {
+                            if(validaVersion()==true)
+                            {
                                 AlertaDatosDescargaMayor();
                             }
-                            else{
+                            else
+                            {
                                 AlertaDatosDescargaMenor();
                             }
                         }
                     }
-                    else{
+                    else
+                    {
                         Toast.makeText(MainActivity.this, "No tienes una conexion de internet estable, porfavor accede a una para descargar el contenido", Toast.LENGTH_LONG).show();
                         numguia=0;
                     }
@@ -11526,11 +11523,7 @@ FragmentManager fm;
                 ventana_frances++;
                 validaVentana1();
                 break;
-            case R.id.anterior_pantalla23_frances:
-                ventana_frances--;
-                validaVentana1();
-                break;
-            case R.id.salir_pantalla23_frances:
+            case R.id.Salir_frances:
                 setContentView(R.layout.guias);
                 guia = false;
                 numguia=0;
