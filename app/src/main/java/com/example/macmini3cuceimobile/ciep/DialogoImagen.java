@@ -22,6 +22,8 @@ import java.io.File;
         */
 public class DialogoImagen extends DialogFragment {
 
+    String imagen = "";
+
     static DialogoImagen newInstance() {
         DialogoImagen f = new DialogoImagen();
 
@@ -30,6 +32,10 @@ public class DialogoImagen extends DialogFragment {
         f.setArguments(args);
 
         return f;
+    }
+
+    public void setImagen(String imagen){
+        this.imagen = imagen;
     }
 
     @Override
@@ -43,7 +49,7 @@ public class DialogoImagen extends DialogFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.dialogoibook, container, false);
         ImageView imageen = (ImageView) v.findViewById(R.id.imagen_ficha_aldiko);
-        File carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ficha_aldiko.zip");
+        File carga = Environment.getExternalStoragePublicDirectory(imagen);
         Bitmap bm = BitmapFactory.decodeFile(String.valueOf(carga));
         imageen.setImageBitmap(bm);
 

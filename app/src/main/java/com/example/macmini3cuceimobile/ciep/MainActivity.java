@@ -1742,6 +1742,7 @@ FragmentManager fm;
                     }
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_aldiko.zip");
                     DI.show(Ft,"dialog");
 
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.macmini3cuceimobile.ciep.PlantillaGuia">
+    <ImageView
+        android:id="@+id/plantilla_imagen"
+        android:layout_weight="15"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/boton_anterior"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/contrasenia"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/boton_siguiente"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/contrasenia"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>
