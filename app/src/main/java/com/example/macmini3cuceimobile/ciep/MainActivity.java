@@ -1732,33 +1732,67 @@ FragmentManager fm;
             imagen2_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /*carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ficha_aldiko.zip");
-                    bm = BitmapFactory.decodeFile(String.valueOf(carga));
-                    imagen2_1_fichaaldiko_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen2_1_fichaaldiko_pantalla4_importanciadelingles);
-                    imagen2_1_fichaaldiko_pantalla4_importanciadelingles.setImageBitmap(bm);*/
                     Fragment prev = fm.findFragmentByTag("dialog");
                     if (prev != null) {
                         Ft.remove(prev);
                     }
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
-                    DI.show(Ft,"dialog");
-
-
+                    DI.setImagen(".estu@pp/guia7/ficha_aldiko.zip");
+                    DI.show(Ft, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/pdfreader.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen3_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen3_pantalla4_importanciadelingles);
             imagen3_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen3_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_ezpdf.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ibooks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen4_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen4_pantalla4_importanciadelingles);
             imagen4_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen4_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_ibooks.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/kindle.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen5_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen5_pantalla4_importanciadelingles);
             imagen5_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen5_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_kindle.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion2_pantalla4_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen6_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen6_pantalla4_importanciadelingles);
@@ -1771,26 +1805,106 @@ FragmentManager fm;
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen8_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen8_pantalla4_importanciadelingles);
             imagen8_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen8_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_binaurality.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/wilingua.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen9_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen9_pantalla4_importanciadelingles);
             imagen9_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen9_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_wilingua.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/duolingo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen10_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen10_pantalla4_importanciadelingles);
             imagen10_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen10_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_duolingo.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/project.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen11_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen11_pantalla4_importanciadelingles);
             imagen11_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen11_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null) {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_project.zip");
+                    DI.show(Ft, "dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/voxy.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen12_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen12_pantalla4_importanciadelingles);
             imagen12_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen12_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_voxy.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mindsnacks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen13_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen13_pantalla4_importanciadelingles);
             imagen13_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen13_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_mindsnack.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion4_pantalla4_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen14_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen14_pantalla4_importanciadelingles);
@@ -1803,26 +1917,110 @@ FragmentManager fm;
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen16_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen16_pantalla4_importanciadelingles);
             imagen16_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen16_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_chumkee.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mylingo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen17_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen17_pantalla4_importanciadelingles);
             imagen17_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen17_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_bmylingo.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/speaking.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen18_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen18_pantalla4_importanciadelingles);
             imagen18_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen18_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_speaking.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/busuu.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen19_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen19_pantalla4_importanciadelingles);
             imagen19_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen19_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_bussu.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/babbel.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen20_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen20_pantalla4_importanciadelingles);
             imagen20_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen20_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_babbel.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/internet.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen21_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen21_pantalla4_importanciadelingles);
             imagen21_pantalla4_importanciadelingles.setImageBitmap(bm);
+            imagen21_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment prev = fm.findFragmentByTag("dialog");
+                    if (prev != null)
+                    {
+                        Ft.remove(prev);
+                    }
+                    Ft.addToBackStack(null);
+                    DI = new DialogoImagen();
+                    DI.setImagen(".estu@pp/guia7/ficha_ainternet_archive.zip");
+                    DI.show(Ft,"dialog");
+                }
+            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/boton_anterior_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen22_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen22_pantalla4_importanciadelingles);
