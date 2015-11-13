@@ -53,5 +53,10 @@ public class Informacion {
         public int getIndice(){
             return indice;
         }
+
+        public String limpiarUrl(String url){
+            String auxiliar = "";
+            return  auxiliar;
+        }
     }
 }

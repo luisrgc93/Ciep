@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".PlantillaIntro" >
         </activity>
+        <activity android:name=".VerdaderoFalso" >
+        </activity>
     </application>
 
 </manifest>
