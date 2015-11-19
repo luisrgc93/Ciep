@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -11351,6 +11352,8 @@ FragmentManager fm;
                 break;
             // BOTONES GUIA 1
             case R.id.comenzar_frances:
+                Intent intent = new Intent(MainActivity.this, VerdaderoFalso.class);
+                startActivity(intent);
                 ventana_frances++;
                 validaVentana1();
                 getSupportActionBar().setSubtitle("Primer contacto con el Francés");
