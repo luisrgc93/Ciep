@@ -269,6 +269,15 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen1_pantalla21_administraciondeltiempo;
     ImageView imagen1_pantalla22_administraciondeltiempo;
 
+    //Variables de la guia 6 mapas mentales
+    int ventana_mapasmentales;
+    LinearLayout fondo1_pantalla1_mapasmentales;
+    ImageView imagen1_pantalla1_mapasmentales;
+    ImageView imagen2_pantalla1_mapasmentales;
+    ImageView comenzar_mapasmentales;
+    ImageView imagen_udg_mapasmentales;
+    ImageView anterior_mapasmentales;
+    ImageView siguiente_mapasmentales;
     //VARIABLES GUIA 8 DATOS NUMERICOS
     LinearLayout fondo1_pantalla1_datosnumericos;
     ImageView imagen1_pantalla1_datosnumericos;
@@ -638,11 +647,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout fondo1_pantalla1_estres;
     ImageView imagen1_pantalla1_estres;
     ImageView comenzar_estres;
-    int ventana_mapasmentales;
-    LinearLayout fondo1_pantalla1_mapasmentales;
-    ImageView imagen1_pantalla1_mapasmentales;
-    ImageView imagen2_pantalla1_mapasmentales;
-    ImageView comenzar_mapasmentales;
+
     //VARIABLES GUIA 7 IMPORTANCIA DEL INGLES
     int ventana_importanciadelingles;
     LinearLayout fondo1_pantalla1_importanciadelingles;
@@ -2099,6 +2104,24 @@ public class MainActivity extends AppCompatActivity {
             bmDrawable = new BitmapDrawable(bm);
             comenzar_mapasmentales = (ImageView) findViewById(R.id.comenzar_mapasmentales);
             comenzar_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
+        if(ventana_mapasmentales == 2){
+            setContentView(R.layout.pantalla2_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilistracion1_pantalla2_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen_udg_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla2_mapasmentales);
+            imagen_udg_mapasmentales.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
     }
     public void validaVentana7(){
@@ -12378,6 +12401,114 @@ public class MainActivity extends AppCompatActivity {
                 guia = false;
                 numguia=0;
                 titulo(numguia);
+                break;
+            case R.id.comenzar_mapasmentales :
+                ventana_mapasmentales++;
+                validaVentana6();
+                getSupportActionBar().setSubtitle("Mapas Mentales");
+                break;
+            case R.id.anterior_pantalla2_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                getSupportActionBar().setSubtitle("Guía de Habilidades para el aprendizaje");
+                break;
+            case R.id.siguiente_pantalla2_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla3_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla3_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla4_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla4_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla5_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla5_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla6_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla6_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla7_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla7_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla8_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla8_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla9_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla9_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+
+            case R.id.anterior_pantalla10_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla10_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+
+            case R.id.anterior_pantalla11_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla11_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+
+
+            case R.id.anterior_pantalla12_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+
+                break;
+            case R.id.siguiente_pantalla12_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
                 break;
 
             //BOTONES GUIA 11 FOROS VIRTUALES
