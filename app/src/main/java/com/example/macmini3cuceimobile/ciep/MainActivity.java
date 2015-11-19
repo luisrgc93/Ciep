@@ -235,39 +235,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView Salir_Frances;
     ImageView imagen_bocina;
 
-    //VARIABLES GUIA 3 ADMINISTRACION DEL TIEMPO
-
-    int ventana_administraciondeltiempo;
-    LinearLayout fondo1_pantalla1_administraciondeltiempo;
-    ImageView imagen1_pantalla1_administraciondeltiempo;
-    ImageView comenzar_administracion;
-    ImageView siguiente_administraciondeltiempo;
-    ImageView anterior_administraciondeltiempo;
-    ImageView imagen2_pantalla2_administraciondeltiempo;
-    ImageView imagen1_pantalla3_administraciondeltiempo;
-    ImageView imagen1_pantalla4_administraciondeltiempo;
-    ImageView imagen1_pantalla5_administraciondeltiempo;
-    ImageView imagen2_pantalla5_administraciondeltiempo;
-    ImageView imagen1_pantalla6_administraciondeltiempo;
-    ImageView imagen1_pantalla7_administraciondeltiempo;
-    ImageView imagen1_pantalla8_administraciondeltiempo;
-    ImageView imagen2_pantalla8_administraciondeltiempo;
-    ImageView imagen1_pantalla9_administraciondeltiempo;
-    ImageView imagen1_pantalla10_administraciondeltiempo;
-    ImageView imagen2_pantalla10_administraciondeltiempo;
-    ImageView imagen3_pantalla10_administraciondeltiempo;
-    ImageView imagen1_pantalla11_administraciondeltiempo;
-    ImageView imagen1_pantalla12_administraciondeltiempo;
-    ImageView imagen1_pantalla13_administraciondeltiempo;
-    ImageView imagen1_pantalla14_administraciondeltiempo;
-    ImageView imagen1_pantalla15_administraciondeltiempo;
-    ImageView imagen1_pantalla16_administraciondeltiempo;
-    ImageView imagen1_pantalla17_administraciondeltiempo;
-    ImageView imagen1_pantalla18_administraciondeltiempo;
-    ImageView imagen1_pantalla19_administraciondeltiempo;
-    ImageView imagen1_pantalla20_administraciondeltiempo;
-    ImageView imagen1_pantalla21_administraciondeltiempo;
-    ImageView imagen1_pantalla22_administraciondeltiempo;
 
     //VARIABLES GUIA 8 DATOS NUMERICOS
     LinearLayout fondo1_pantalla1_datosnumericos;
@@ -633,7 +600,11 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen3_pantalla17_habilidadesdelectura;
     ImageView imagen1_pantalla18_habilidadesdelectura;
 
-    //VARIABLES GUIA 4 ESTRES
+    //VARIABLES GUIA 3 ADMINISTRACION DEL TIEMPO
+    int ventana_administraciondeltiempo;
+    LinearLayout fondo1_pantalla1_administraciondeltiempo;
+    ImageView imagen1_pantalla1_administraciondeltiempo;
+    ImageView comenzar_administraciondeltiempo;
     int ventana_estres;
     LinearLayout fondo1_pantalla1_estres;
     ImageView imagen1_pantalla1_estres;
@@ -1619,10 +1590,8 @@ FragmentManager fm;
         }
 
     }
-    public void validaVentana3()
-    {
-        if (ventana_administraciondeltiempo == 1)
-        {
+    public void validaVentana3(){
+        if (ventana_administraciondeltiempo == 1) {
             setContentView(R.layout.pantalla1_administraciondeltiempo);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/portada_administraciondeltiempo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -1636,427 +1605,8 @@ FragmentManager fm;
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/comenzar_administraciondeltiempo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            comenzar_administracion = (ImageView) findViewById(R.id.comenzar_administraciondeltiempo);
-            comenzar_administracion.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 2)
-        {
-            setContentView(R.layout.pantalla2_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla2_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen2_pantalla2_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla2_administraciondeltiempo);
-            imagen2_pantalla2_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 3)
-        {
-            setContentView(R.layout.pantalla3_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla3_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla3_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla3_administraciondeltiempo);
-            imagen1_pantalla3_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 4)
-        {
-            setContentView(R.layout.pantalla4_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla4_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla4_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla4_administraciondeltiempo);
-            imagen1_pantalla4_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 5)
-        {
-            setContentView(R.layout.pantalla5_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla5_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla5_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla5_administraciondeltiempo);
-            imagen1_pantalla5_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion3_pantalla5_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen2_pantalla5_administraciondeltiempo = (ImageView) findViewById(R.id.imagen2_pantalla5_administraciondeltiempo);
-            imagen2_pantalla5_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 6)
-        {
-            setContentView(R.layout.pantalla6_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla6_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla6_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla6_administraciondeltiempo);
-            imagen1_pantalla6_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 7)
-        {
-            setContentView(R.layout.pantalla7_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla7_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla7_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla7_administraciondeltiempo);
-            imagen1_pantalla7_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 8)
-    {
-        setContentView(R.layout.pantalla8_administraciondeltiempo);
-        carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion1_pantalla8_administraciondeltiempo.zip");
-        bm = BitmapFactory.decodeFile(String.valueOf(carga));
-        bmDrawable = new BitmapDrawable(bm);
-        imagen1_pantalla8_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla8_administraciondeltiempo);
-        imagen1_pantalla8_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla8_administraciondeltiempo.zip");
-        bm = BitmapFactory.decodeFile(String.valueOf(carga));
-        bmDrawable = new BitmapDrawable(bm);
-        imagen2_pantalla8_administraciondeltiempo = (ImageView) findViewById(R.id.imagen2_pantalla8_administraciondeltiempo);
-        imagen2_pantalla8_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-        bm = BitmapFactory.decodeFile(String.valueOf(carga));
-        bmDrawable = new BitmapDrawable(bm);
-        siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-        siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-        bm = BitmapFactory.decodeFile(String.valueOf(carga));
-        bmDrawable = new BitmapDrawable(bm);
-        anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-        anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-    }
-        if(ventana_administraciondeltiempo == 9)
-        {
-            setContentView(R.layout.pantalla9_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion1_pantalla9_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla9_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla9_administraciondeltiempo);
-            imagen1_pantalla9_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 10)
-        {
-            setContentView(R.layout.pantalla10_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion1_pantalla10_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla10_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla10_administraciondeltiempo);
-            imagen1_pantalla10_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla10_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen2_pantalla10_administraciondeltiempo = (ImageView) findViewById(R.id.imagen2_pantalla10_administraciondeltiempo);
-            imagen2_pantalla10_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion3_pantalla10_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen3_pantalla10_administraciondeltiempo = (ImageView) findViewById(R.id.imagen3_pantalla10_administraciondeltiempo);
-            imagen3_pantalla10_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 11)
-        {
-            setContentView(R.layout.pantalla11_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla11_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla11_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla11_administraciondeltiempo);
-            imagen1_pantalla11_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 12)
-        {
-            setContentView(R.layout.pantalla12_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla12_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla12_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla12_administraciondeltiempo);
-            imagen1_pantalla12_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 13)
-        {
-            setContentView(R.layout.pantalla13_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla13_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla13_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla13_administraciondeltiempo);
-            imagen1_pantalla13_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 14)
-        {
-            setContentView(R.layout.pantalla14_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla14_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla14_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla14_administraciondeltiempo);
-            imagen1_pantalla14_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 15)
-        {
-            setContentView(R.layout.pantalla15_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla15_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla15_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla15_administraciondeltiempo);
-            imagen1_pantalla15_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 16)
-        {
-            setContentView(R.layout.pantalla16_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla16_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla16_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla16_administraciondeltiempo);
-            imagen1_pantalla16_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 17)
-        {
-            setContentView(R.layout.pantalla17_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla17_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla17_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla17_administraciondeltiempo);
-            imagen1_pantalla17_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 18)
-        {
-            setContentView(R.layout.pantalla18_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla18_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla18_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla18_administraciondeltiempo);
-            imagen1_pantalla18_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 19)
-        {
-            setContentView(R.layout.pantalla19_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion1_pantalla19_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla19_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla19_administraciondeltiempo);
-            imagen1_pantalla19_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 20)
-        {
-            setContentView(R.layout.pantalla20_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla20_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla20_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla20_administraciondeltiempo);
-            imagen1_pantalla20_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 21)
-        {
-            setContentView(R.layout.pantalla21_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla21_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla21_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla21_administraciondeltiempo);
-            imagen1_pantalla21_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-        }
-        if(ventana_administraciondeltiempo == 22)
-        {
-            setContentView(R.layout.pantalla22_administraciondeltiempo);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion1_pantalla22_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla22_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla22_administraciondeltiempo);
-            imagen1_pantalla22_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
-            siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
+            comenzar_administraciondeltiempo = (ImageView) findViewById(R.id.comenzar_administraciondeltiempo);
+            comenzar_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
         }
     }
     public void validaVentana5(){
@@ -2182,67 +1732,33 @@ FragmentManager fm;
             imagen2_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    /*carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ficha_aldiko.zip");
+                    bm = BitmapFactory.decodeFile(String.valueOf(carga));
+                    imagen2_1_fichaaldiko_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen2_1_fichaaldiko_pantalla4_importanciadelingles);
+                    imagen2_1_fichaaldiko_pantalla4_importanciadelingles.setImageBitmap(bm);*/
                     Fragment prev = fm.findFragmentByTag("dialog");
                     if (prev != null) {
                         Ft.remove(prev);
                     }
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_aldiko.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(Ft,"dialog");
+
+
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/pdfreader.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen3_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen3_pantalla4_importanciadelingles);
             imagen3_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen3_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_ezpdf.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ibooks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen4_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen4_pantalla4_importanciadelingles);
             imagen4_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen4_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_ibooks.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/kindle.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen5_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen5_pantalla4_importanciadelingles);
             imagen5_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen5_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_kindle.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion2_pantalla4_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen6_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen6_pantalla4_importanciadelingles);
@@ -2255,106 +1771,26 @@ FragmentManager fm;
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen8_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen8_pantalla4_importanciadelingles);
             imagen8_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen8_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_binaurality.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/wilingua.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen9_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen9_pantalla4_importanciadelingles);
             imagen9_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen9_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_wilingua.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/duolingo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen10_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen10_pantalla4_importanciadelingles);
             imagen10_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen10_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_duolingo.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/project.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen11_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen11_pantalla4_importanciadelingles);
             imagen11_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen11_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null) {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_project.zip");
-                    DI.show(Ft, "dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/voxy.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen12_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen12_pantalla4_importanciadelingles);
             imagen12_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen12_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_voxy.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mindsnacks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen13_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen13_pantalla4_importanciadelingles);
             imagen13_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen13_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_mindsnack.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion4_pantalla4_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen14_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen14_pantalla4_importanciadelingles);
@@ -2367,110 +1803,26 @@ FragmentManager fm;
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen16_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen16_pantalla4_importanciadelingles);
             imagen16_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen16_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_chumkee.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mylingo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen17_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen17_pantalla4_importanciadelingles);
             imagen17_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen17_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_bmylingo.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/speaking.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen18_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen18_pantalla4_importanciadelingles);
             imagen18_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen18_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_speaking.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/busuu.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen19_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen19_pantalla4_importanciadelingles);
             imagen19_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen19_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_bussu.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/babbel.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen20_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen20_pantalla4_importanciadelingles);
             imagen20_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen20_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_babbel.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/internet.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen21_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen21_pantalla4_importanciadelingles);
             imagen21_pantalla4_importanciadelingles.setImageBitmap(bm);
-            imagen21_pantalla4_importanciadelingles.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Fragment prev = fm.findFragmentByTag("dialog");
-                    if (prev != null)
-                    {
-                        Ft.remove(prev);
-                    }
-                    Ft.addToBackStack(null);
-                    DI = new DialogoImagen();
-                    DI.setImagen(".estu@pp/guia7/ficha_ainternet_archive.zip");
-                    DI.show(Ft,"dialog");
-                }
-            });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/boton_anterior_importanciadelingles.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             imagen22_pantalla4_importanciadelingles = (ImageView) findViewById(R.id.imagen22_pantalla4_importanciadelingles);
@@ -5171,6 +4523,9 @@ FragmentManager fm;
                 url = "https://dl.dropbox.com/s/ifcssbpz306fbgy/ilustracion1_pantalla9_administraciondeltiempo.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla9_administraciondeltiempo.zip";
                 descargar(rutaarchivos, url, nomarchivo);
+                url = "https://dl.dropbox.com/s/bc8dlm47rjy7oei/ilustracion1_pantalla10_administraciondeltiempo.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
+                descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/7l7fldf8sqk7j9c/ilustracion1_pantalla11_administraciondeltiempo.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla11_administraciondeltiempo.zip";
                 descargar(rutaarchivos, url, nomarchivo);
@@ -5264,37 +4619,9 @@ FragmentManager fm;
                 url = "https://dl.dropbox.com/s/ucl0po7vap3s0rw/portada_administraciondeltiempo.png?dl=0";
                 nomarchivo = "portada_administraciondeltiempo.zip";
                 descargar(rutaarchivos, url, nomarchivo);
-                //
-                url = "https://dl.dropbox.com/s/bc8dlm47rjy7oei/ilustracion1_pantalla10_administraciondeltiempo.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
-                descargar(rutaarchivos, url, nomarchivo);
-                url = "https://dl.dropbox.com/s/mmgx4hagtz6gfm3/ilustracion2_pantalla10_administraciondeltiepo.png?dl=0";
-                nomarchivo = "ilustracion2_pantalla10_administraciondeltiempo.zip";
-                descargar(rutaarchivos, url, nomarchivo);
-                url = "https://dl.dropbox.com/s/05408fnhs7jhsds/ilustracion3_pantalla10_administraciondeltiempo.png?dl=0";
-                nomarchivo = "ilustracion3_pantalla10_administraciondeltiempo.zip";
-                descargar(rutaarchivos, url, nomarchivo);
             }
             else
             {
-                url = "https://dl.dropbox.com/s/bc8dlm47rjy7oei/ilustracion1_pantalla10_administraciondeltiempo.png?dl=0";
-                nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists()) {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/mmgx4hagtz6gfm3/ilustracion2_pantalla10_administraciondeltiepo.png?dl=0";
-                nomarchivo = "ilustracion2_pantalla10_administraciondeltiempo.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists()) {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
-                url = "https://dl.dropbox.com/s/05408fnhs7jhsds/ilustracion3_pantalla10_administraciondeltiempo.png?dl=0";
-                nomarchivo = "ilustracion3_pantalla10_administraciondeltiempo.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-                if(!dir.exists()) {
-                    descargar(rutaarchivos, url, nomarchivo);
-                }
                 url = "https://dl.dropbox.com/s/tztm5m394m6usry/boton_anterior_administraciondeltiempo.png?dl=0";
                 nomarchivo = "boton_anterior_administraciondeltiempo.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -5369,6 +4696,12 @@ FragmentManager fm;
                 }
                 url = "https://dl.dropbox.com/s/ifcssbpz306fbgy/ilustracion1_pantalla9_administraciondeltiempo.png?dl=0";
                 nomarchivo = "ilustracion1_pantalla9_administraciondeltiempo.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
+                url = "https://dl.dropbox.com/s/bc8dlm47rjy7oei/ilustracion1_pantalla10_administraciondeltiempo.png?dl=0";
+                nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
@@ -8453,6 +7786,11 @@ FragmentManager fm;
             if(dir.exists()){
                 ar++;
             }
+            nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
             nomarchivo = "ilustracion1_pantalla11_administraciondeltiempo.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
             if(dir.exists()){
@@ -8606,21 +7944,6 @@ FragmentManager fm;
             nomarchivo = "portada_administraciondeltiempo.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
             if(dir.exists()){
-                ar++;
-            }
-            nomarchivo = "ilustracion1_pantalla10_administraciondeltiempo.zip";
-            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-            if(dir.exists()) {
-                ar++;
-            }
-            nomarchivo = "ilustracion2_pantalla10_administraciondeltiempo.zip";
-            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-            if(dir.exists()) {
-                ar++;
-            }
-            nomarchivo = "ilustracion3_pantalla10_administraciondeltiempo.zip";
-            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
-            if(dir.exists()) {
                 ar++;
             }
         }
@@ -10152,11 +9475,11 @@ FragmentManager fm;
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 47) {
+                        while (numar != 45) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 47) {
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -10370,11 +9693,11 @@ FragmentManager fm;
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 47) {
+                        while (numar != 45) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 47) {
+                        if (numar == 45) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -11655,7 +10978,7 @@ FragmentManager fm;
                 numguia=3;
                 numar=0;
                 numar=validaArchivos();
-                if(numar==47){
+                if(numar==45){
                     guia=true;
                     titulo(numguia);
                     ventana_administraciondeltiempo=1;
@@ -11673,7 +10996,7 @@ FragmentManager fm;
                                     numar=validaArchivos();
                                 }
                                 mensaje(2);
-                                if(numar==47){
+                                if(numar==45){
                                     titulo(numguia);
                                     ventana_administraciondeltiempo=1;
                                     validaVentana3();
@@ -12201,179 +11524,6 @@ FragmentManager fm;
                 validaVentana1();
                 break;
             case R.id.Salir_frances:
-                setContentView(R.layout.guias);
-                guia = false;
-                numguia=0;
-                titulo(numguia);
-                break;
-            //BOTONES GUIA 3 ADMINISTRACION DEL TIEMPO
-            case R.id.comenzar_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                getSupportActionBar().setSubtitle("Aprendiendo a gestionar mi tiempo");
-                break;
-            case R.id.anterior_pantalla2_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                getSupportActionBar().setSubtitle("Administracion del timepo");
-                break;
-            case R.id.siguiente_pantalla2_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla3_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla3_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla4_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla4_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla5_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla5_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla6_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla6_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla7_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla7_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla8_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla8_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla9_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla9_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla10_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla10_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla11_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla11_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla12_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla12_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla13_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla13_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla14_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla14_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla15_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla15_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla16_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla16_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla17_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla17_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla18_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla18_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla19_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla19_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla20_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla20_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.anterior_pantalla21_administraciondeltiempo:
-                ventana_administraciondeltiempo--;
-                validaVentana3();
-                break;
-            case R.id.siguiente_pantalla21_administraciondeltiempo:
-                ventana_administraciondeltiempo++;
-                validaVentana3();
-                break;
-            case R.id.salir_administraciondeltiempo:
                 setContentView(R.layout.guias);
                 guia = false;
                 numguia=0;

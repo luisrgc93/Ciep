@@ -37,7 +37,7 @@
                 android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="360dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="420dp"
                     android:id="@+id/imagen1_pantalla2_frances" />
             </LinearLayout>

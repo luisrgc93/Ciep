@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="20"
+        android:background="#ffffffff">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView3"
+            android:layout_weight="3" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="20"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imagen1_pantalla2_mapasmentales" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\nCómo establecer un 'Encuadre mental'\nproductivo para resumir textos\n\nDessarrolla tu estilo personal "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:textIsSelectable="true"
+                    android:id="@+id/textView2"
+                    android:gravity="center" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="10"
+                    android:layout_weight="4.5">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="\nPara conseguir el mejor rendimiento posible de tus oportunidades para tomar notas, es importante que organices tus puntos de vista para tener un mapa mental claramente estructurado a medida que progreses tomando notas.\n"
+                            android:id="@+id/textView39" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="\n5 Obtén una visión general del texto estudiando el índice, los principales encabezamientos, resultados, conclusiones, resúmenes, ilustraciones o gráficos principales y cualquier otro elemento que pueda llamar la atención. Este proceso te dará la imagen central y las ramas principales (o ideas ordenadoras básicas) del nuevo mapa mental de dicho texto. Muchos estudiantes comentan que, con frecuencia, cuando han terminado de plasmar su visión general, ya han completado el noventa por ciento de su esfuerzo de aprendizaje. Al concentrarse en la estructura global y en los principales elementos del texto, se hace más fácil cartografiar el ímpetu ordenador esencial del autor.
+
+\n"
+                            android:id="@+id/textView39" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imagen1_pantalla10_mapasmentales" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="\n6 Pasa ahora a la etapa de visión previa (o inspección previa), considerando todo el material que no esté incluido en la visión general, especialmente los comienzos y finales de párrafos, secciones y capítulos - donde suele concentrarse la información esencial – y añade a tu mapa mental lo que sea necesario.
+
+\n"
+                            android:id="@+id/textView39" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imagen2_pantalla10_mapasmentales" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="\n7 La etapa siguiente es de visión interior, completándose globalmente el rompecabezas del aprendizaje, aunque pasando todavía por alto cualquier área que presente problemas importantes. Tras haberte familiarizado con el resto del texto, ahora debería resultarte mucho más fácil entender estos pasajes y terminar el mapa mental.
+\n"
+                            android:id="@+id/textView39" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imagen3_pantalla10_mapasmentales" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="\n8 Finalmente llegas a la etapa de revisión, en la cual vuelves sobre los puntos problemáticos que eludiste en las etapas anteriores y revisas nuevamente el texto para resolver cualquier cuestión pendiente o cumplir algún objetivo no satisfecho. Llegados a este punto, debes completar tus notas para el mapa mental.
+\n"
+                            android:id="@+id/textView39" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imagen4_pantalla10_mapasmentales" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="17"
+            android:weightSum="20" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9.5" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:weightSum="10" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:id="@+id/anterior_pantalla5_importanciadelingles"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imagen2_pantalla5_importanciadelingles" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:onClick="onClick"
+                    android:id="@+id/salir_importanciadelingles">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imagen3_pantalla5_importanciadelingles"
+                        android:longClickable="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9.5" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
