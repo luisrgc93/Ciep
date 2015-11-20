@@ -178,7 +178,7 @@ ramificado y a través de él\n"
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/imageView14" />
+                            android:id="@+id/imagen1_pantalla7_mapasmentales" />
                     </LinearLayout>
 
                     <LinearLayout

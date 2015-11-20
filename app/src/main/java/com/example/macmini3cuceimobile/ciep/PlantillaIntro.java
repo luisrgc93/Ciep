@@ -50,5 +50,4 @@ public class PlantillaIntro extends AppCompatActivity {
         downloadManager.enqueue(request);
     }
 
-
 }
