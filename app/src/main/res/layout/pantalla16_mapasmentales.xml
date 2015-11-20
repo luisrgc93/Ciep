@@ -13,7 +13,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/scrollView3"
-            android:layout_weight="3" >
+            android:layout_weight="2" >
 
             <LinearLayout
                 android:orientation="vertical"
@@ -21,11 +21,6 @@
                 android:layout_height="match_parent"
                 android:weightSum="20"
                 android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imagen1_pantalla2_mapasmentales" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -47,23 +42,43 @@
 
 
                     <LinearLayout
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="\n6.- Utiliza sólo UNA PALABRA CLAVE POR LINEA. ¿Por qué?, Porque los núcleos individuales de palabras clave proporcionan a tu Mapa Mental más flexibilidad y contundencia. Cada palabra o imagen tiene un efecto multiplicador y contiene en sí misma un amplio abanico de asociaciones y conexiones. Cuando utilizas por separado las palabras clave, confieres a cada una más libertad para irradiar nuevas ideas y pensamientos.\n"
-                            android:id="@+id/textView39" />
+                        android:layout_weight="1"
+                        android:weightSum="20">
 
 
-                        <ImageView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/imagen1_pantalla2_mapasmentales" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9.5"></LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="\n6.- Utiliza sólo UNA PALABRA CLAVE POR LINEA. ¿Por qué?, Porque los núcleos individuales de palabras clave proporcionan a tu Mapa Mental más flexibilidad y contundencia. Cada palabra o imagen tiene un efecto multiplicador y contiene en sí misma un amplio abanico de asociaciones y conexiones. Cuando utilizas por separado las palabras clave, confieres a cada una más libertad para irradiar nuevas ideas y pensamientos.\n"
+                                android:id="@+id/textView39" />
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/imagen2_pantalla16_mapasmentales" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9.5" />
 
                     </LinearLayout>
 
@@ -76,7 +91,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="17"
+            android:layout_weight="18"
             android:weightSum="20" >
 
             <LinearLayout
@@ -97,13 +112,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
-                    android:id="@+id/anterior_pantalla5_importanciadelingles"
+                    android:id="@+id/anterior_pantalla16_mapasmentales"
                     android:onClick="onClick">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen1_pantalla16_mapasmentales" />
+                        android:id="@+id/anterior_mapasmentales" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,12 +133,12 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
                     android:onClick="onClick"
-                    android:id="@+id/salir_importanciadelingles">
+                    android:id="@+id/siguiente_pantalla16_mapasmentales">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen3_pantalla5_importanciadelingles"
+                        android:id="@+id/siguiente_mapasmentales"
                         android:longClickable="false" />
                 </LinearLayout>
             </LinearLayout>

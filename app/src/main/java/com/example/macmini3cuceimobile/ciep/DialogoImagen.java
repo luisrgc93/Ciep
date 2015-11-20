@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -49,8 +50,9 @@ public class DialogoImagen extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         View v = inflater.inflate(R.layout.dialogoibook, container, false);
-        ImageView imageen = (ImageView) v.findViewById(R.id.imagen_fichas);
+        ImageView imageen = (ImageView) v.findViewById(R.id.ficha);
         File carga = Environment.getExternalStoragePublicDirectory(imagen);
         Bitmap bm = BitmapFactory.decodeFile(String.valueOf(carga));
         imageen.setImageBitmap(bm);

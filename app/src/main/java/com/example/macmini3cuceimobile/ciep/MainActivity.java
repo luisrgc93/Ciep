@@ -269,6 +269,34 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen1_pantalla21_administraciondeltiempo;
     ImageView imagen1_pantalla22_administraciondeltiempo;
 
+    //VARIABLES GUIA 6 MAPAS MENTALES DESDE LA PANTALLA 13!
+    int ventana_mapasmentales;
+    LinearLayout fondo1_pantalla1_mapasmentales;
+    ImageView imagen1_pantalla1_mapasmentales;
+    ImageView imagen2_pantalla1_mapasmentales;
+    ImageView comenzar_mapasmentales;
+    ImageView siguiente_mapasmentales;
+    ImageView anterior_mapasmentales;
+    ImageView imagen1_pantalla13_mapasmentales;
+    ImageView imagen2_pantalla13_mapasmentales;
+    ImageView imagen1_pantalla14_mapasmentales;
+    ImageView imagen1_pantalla15_mapasmentales;
+    ImageView imagen1_pantalla16_mapasmentales;
+    ImageView imagen1_pantalla17_mapasmentales;
+    ImageView imagen1_pantalla18_mapasmentales;
+    ImageView imagen2_pantalla18_mapasmentales;
+    ImageView imagen3_pantalla18_mapasmentales;
+    ImageView imagen4_pantalla18_mapasmentales;
+    ImageView imagen5_pantalla18_mapasmentales;
+    ImageView imagen6_pantalla18_mapasmentales;
+    ImageView imagen7_pantalla18_mapasmentales;
+    ImageView imagen8_pantalla18_mapasmentales;
+    ImageView imagen9_pantalla18_mapasmentales;
+    ImageView imagen10_pantalla18_mapasmentales;
+    ImageView imagen11_pantalla18_mapasmentales;
+    ImageView imagen12_pantalla18_mapasmentales;
+
+
     //VARIABLES GUIA 8 DATOS NUMERICOS
     LinearLayout fondo1_pantalla1_datosnumericos;
     ImageView imagen1_pantalla1_datosnumericos;
@@ -638,11 +666,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout fondo1_pantalla1_estres;
     ImageView imagen1_pantalla1_estres;
     ImageView comenzar_estres;
-    int ventana_mapasmentales;
-    LinearLayout fondo1_pantalla1_mapasmentales;
-    ImageView imagen1_pantalla1_mapasmentales;
-    ImageView imagen2_pantalla1_mapasmentales;
-    ImageView comenzar_mapasmentales;
+
     //VARIABLES GUIA 7 IMPORTANCIA DEL INGLES
     int ventana_importanciadelingles;
     LinearLayout fondo1_pantalla1_importanciadelingles;
@@ -2100,6 +2124,176 @@ public class MainActivity extends AppCompatActivity {
             comenzar_mapasmentales = (ImageView) findViewById(R.id.comenzar_mapasmentales);
             comenzar_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
+        if(ventana_mapasmentales == 13)
+        {
+            setContentView(R.layout.pantalla13_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla13_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen2_pantalla13_mapasmentales = (ImageView) findViewById(R.id.imagen2_pantalla13_mapasmentales);
+            imagen2_pantalla13_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.imagen4_pantalla13_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.imagen3_pantalla13_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+
+        }
+        if(ventana_mapasmentales == 14)
+        {
+            setContentView(R.layout.pantalla14_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla14_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla14_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla14_mapasmentales);
+            imagen1_pantalla14_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.imagen_sig_pantalla14_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.imagen_ant_pantalla14_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
+        if(ventana_mapasmentales == 15)
+        {
+            setContentView(R.layout.pantalla15_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla15_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla15_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla15_mapasmentales);
+            imagen1_pantalla15_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.siguiente_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
+        if(ventana_mapasmentales == 16)
+        {
+            setContentView(R.layout.pantalla16_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla16_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla16_mapasmentales = (ImageView) findViewById(R.id.imagen2_pantalla16_mapasmentales);
+            imagen1_pantalla16_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.siguiente_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
+        if(ventana_mapasmentales == 17)
+        {
+            setContentView(R.layout.pantalla17_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla17_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla17_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla17_mapasmentales);
+            imagen1_pantalla17_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.siguiente_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
+        if(ventana_mapasmentales == 18)
+        {
+            setContentView(R.layout.pantalla18_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/mindomo.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen1_pantalla18_mapasmentales = (ImageView) findViewById(R.id.mindomo);
+            imagen1_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/spider_scribe.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen2_pantalla18_mapasmentales = (ImageView) findViewById(R.id.spider_scribe);
+            imagen2_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/mindmeister.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen3_pantalla18_mapasmentales = (ImageView) findViewById(R.id.mindmeister);
+            imagen3_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/bubbl.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen4_pantalla18_mapasmentales = (ImageView) findViewById(R.id.bubbl_us);
+            imagen4_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/mindmapr.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen5_pantalla18_mapasmentales = (ImageView) findViewById(R.id.mindmapr);
+            imagen5_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/xmind6.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen6_pantalla18_mapasmentales = (ImageView) findViewById(R.id.xmind6);
+            imagen6_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/mind42.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen7_pantalla18_mapasmentales = (ImageView) findViewById(R.id.mind42);
+            imagen7_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/wise_mapping.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen8_pantalla18_mapasmentales = (ImageView) findViewById(R.id.wisemapping);
+            imagen8_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/mindnode.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen9_pantalla18_mapasmentales = (ImageView) findViewById(R.id.mindnode);
+            imagen9_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/simplemind.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen10_pantalla18_mapasmentales = (ImageView) findViewById(R.id.simplemind);
+            imagen10_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/my_thoughts_for_mac.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen11_pantalla18_mapasmentales = (ImageView) findViewById(R.id.myThoughts_for_mac);
+            imagen11_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/freemind.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            imagen12_pantalla18_mapasmentales = (ImageView) findViewById(R.id.freemind);
+            imagen12_pantalla18_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.siguiente_mapasmentales);
+            siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
+        }
     }
     public void validaVentana7(){
         if (ventana_importanciadelingles == 1) {
@@ -2189,7 +2383,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_aldiko.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/pdfreader.zip");
@@ -2206,8 +2400,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_ezpdf.zip");
-                    DI.show(Ft, "dialog");
-                }
+                    DI.show(fm,"dialog");               }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ibooks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -2223,7 +2416,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_ibooks.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/kindle.zip");
@@ -2240,7 +2433,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_kindle.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion2_pantalla4_importanciadelingles.zip");
@@ -2265,7 +2458,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_binaurality.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/wilingua.zip");
@@ -2282,7 +2475,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_wilingua.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/duolingo.zip");
@@ -2299,7 +2492,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_duolingo.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/project.zip");
@@ -2316,7 +2509,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_project.zip");
-                    DI.show(Ft, "dialog");
+                    DI.show(fm, "dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/voxy.zip");
@@ -2334,7 +2527,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_voxy.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mindsnacks.zip");
@@ -2352,7 +2545,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_mindsnack.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ilustracion4_pantalla4_importanciadelingles.zip");
@@ -2378,7 +2571,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_chumkee.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/mylingo.zip");
@@ -2396,7 +2589,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_bmylingo.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/speaking.zip");
@@ -2414,7 +2607,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_speaking.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/busuu.zip");
@@ -2432,7 +2625,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_bussu.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/babbel.zip");
@@ -2450,7 +2643,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_babbel.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/internet.zip");
@@ -2468,7 +2661,7 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_ainternet_archive.zip");
-                    DI.show(Ft,"dialog");
+                    DI.show(fm,"dialog");
                 }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/boton_anterior_importanciadelingles.zip");
@@ -5961,7 +6154,7 @@ public class MainActivity extends AppCompatActivity {
                 nomarchivo = "mindmapr.zip";
                 descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/kexcvzlv7ki7f35/mindmeister.png?dl=0";
-                nomarchivo = "mindmapr.zip";
+                nomarchivo = "mindmeister.zip";
                 descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/ahip54xjymyccn6/mindnode.png?dl=0";
                 nomarchivo = "mindnode.zip";
@@ -6189,7 +6382,7 @@ public class MainActivity extends AppCompatActivity {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/kexcvzlv7ki7f35/mindmeister.png?dl=0";
-                nomarchivo = "mindmapr.zip";
+                nomarchivo = "mindmeister.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
@@ -12380,6 +12573,59 @@ public class MainActivity extends AppCompatActivity {
                 titulo(numguia);
                 break;
 
+            //BOTONES GUIA 6 MAPAS MENTALES
+            case R.id.comenzar_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla13_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla13_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla14_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla14_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla15_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla15_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla16_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla16_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla17_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla17_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
+            case R.id.anterior_pantalla18_mapasmentales:
+                ventana_mapasmentales--;
+                validaVentana6();
+                break;
+            case R.id.siguiente_pantalla18_mapasmentales:
+                ventana_mapasmentales++;
+                validaVentana6();
+                break;
             //BOTONES GUIA 11 FOROS VIRTUALES
             case R.id.comenzar_forosvirtuales:
                 ventana_foros++;

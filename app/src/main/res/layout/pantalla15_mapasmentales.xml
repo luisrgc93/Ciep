@@ -13,7 +13,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/scrollView3"
-            android:layout_weight="3" >
+            android:layout_weight="2
+            " >
 
             <LinearLayout
                 android:orientation="vertical"
@@ -21,11 +22,6 @@
                 android:layout_height="match_parent"
                 android:weightSum="20"
                 android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imagen1_pantalla2_mapasmentales" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -47,24 +43,44 @@
 
 
                     <LinearLayout
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="\n
-5.- Traza líneas CURVAS en lugar de rectas. ¿Por qué?, Porque las líneas rectas aburren a tu cerebro. Las líneas curvas y asimétricas son más atractivas y capturan la atención de tus ojos con mayor facilidad.\n"
-                            android:id="@+id/textView39" />
 
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9.5"></LinearLayout>
 
-                        <ImageView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/imagen1_pantalla15_mapasmentales" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="20"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="    5.- Traza líneas CURVAS en lugar de rectas. ¿Por qué?, Porque las líneas rectas aburren a tu cerebro. Las líneas curvas y asimétricas son más atractivas y capturan la atención de tus ojos con mayor facilidad.\n"
+                                android:id="@+id/textView39" />
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/imagen1_pantalla15_mapasmentales"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9.5" />
 
                     </LinearLayout>
 
@@ -78,7 +94,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="17"
+            android:layout_weight="18"
             android:weightSum="20" >
 
             <LinearLayout
@@ -99,13 +115,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
-                    android:id="@+id/anterior_pantalla5_importanciadelingles"
+                    android:id="@+id/anterior_pantalla15_mapasmentales"
                     android:onClick="onClick">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen2_pantalla5_importanciadelingles" />
+                        android:id="@+id/anterior_mapasmentales" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,12 +136,12 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
                     android:onClick="onClick"
-                    android:id="@+id/salir_importanciadelingles">
+                    android:id="@+id/siguiente_pantalla15_mapasmentales">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen3_pantalla5_importanciadelingles"
+                        android:id="@+id/siguiente_mapasmentales"
                         android:longClickable="false" />
                 </LinearLayout>
             </LinearLayout>
