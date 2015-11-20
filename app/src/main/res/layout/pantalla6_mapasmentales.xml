@@ -392,13 +392,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
-                    android:id="@+id/anterior_pantalla5_importanciadelingles"
+                    android:id="@+id/anterior_pantalla6_mapasmentales"
                     android:onClick="onClick">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen2_pantalla5_importanciadelingles" />
+                        android:id="@+id/boton_anterior_pantalla6_mapasmentales" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -413,12 +413,12 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="3"
                     android:onClick="onClick"
-                    android:id="@+id/salir_importanciadelingles">
+                    android:id="@+id/siguiente_pantalla6_mapasmentales">
 
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imagen3_pantalla5_importanciadelingles"
+                        android:id="@+id/boton_siguiente_pantalla6_mapasmentales"
                         android:longClickable="false" />
                 </LinearLayout>
             </LinearLayout>
