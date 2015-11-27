@@ -44,11 +44,12 @@ public class DragAndDrop extends AppCompatActivity {
     RelativeLayout relativeLayout10;
     RelativeLayout relativeLayout11;
     RelativeLayout relativeLayout12;
-
+    boolean terminar = false;
     ArrayList<Opcion> opcions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag_and_drop);
         contexto = getApplicationContext();
@@ -82,17 +83,17 @@ public class DragAndDrop extends AppCompatActivity {
         imageView12 = (ImageView) findViewById(R.id.arrastra_12);
 
         opcions.add(new Opcion(imageView1, 1, 0));
-        opcions.add(new Opcion(imageView2, 2, 0));
+        opcions.add(new Opcion(imageView2, 1, 0));
         opcions.add(new Opcion(imageView3, 1, 0));
         opcions.add(new Opcion(imageView4, 2, 0));
-        opcions.add(new Opcion(imageView5, 1, 0));
+        opcions.add(new Opcion(imageView5, 2, 0));
         opcions.add(new Opcion(imageView6, 2, 0));
-        opcions.add(new Opcion(imageView7, 1, 0));
-        opcions.add(new Opcion(imageView8, 2, 0));
-        opcions.add(new Opcion(imageView9, 1, 0));
-        opcions.add(new Opcion(imageView10, 2, 0));
-        opcions.add(new Opcion(imageView11, 1, 0));
-        opcions.add(new Opcion(imageView12, 2, 0));
+        opcions.add(new Opcion(imageView7, 2, 0));
+        opcions.add(new Opcion(imageView8, 1, 0));
+        opcions.add(new Opcion(imageView9, 2, 0));
+        opcions.add(new Opcion(imageView10, 1, 0));
+        opcions.add(new Opcion(imageView11, 2, 0));
+        opcions.add(new Opcion(imageView12, 1, 0));
 
         //Se agrega para que se puedan mover
         imageView1.setOnTouchListener(new DragListener(opcions.get(0)));
@@ -108,12 +109,19 @@ public class DragAndDrop extends AppCompatActivity {
         imageView11.setOnTouchListener(new DragListener(opcions.get(10)));
         imageView12.setOnTouchListener(new DragListener(opcions.get(11)));
 
-        Button button = (Button) findViewById(R.id.boton_evaluar);
+        final Button button = (Button) findViewById(R.id.boton_evaluar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String resultado = evaluar();
-                Toast.makeText(contexto, resultado, Toast.LENGTH_SHORT).show();
+
+                if (terminar) {
+                    finish();
+                } else {
+                    String resultado = evaluar();
+                    Toast.makeText(contexto, resultado, Toast.LENGTH_SHORT).show();
+                    button.setText("Terminar");
+                    terminar = true;
+                }
             }
         });
     }
@@ -128,7 +136,7 @@ public class DragAndDrop extends AppCompatActivity {
             }
         }
 
-        return "Tienes " + correctas + "respuestas correctas y " + (12 - correctas) + " incorrectas";
+        return "Tienes " + correctas + " respuestas correctas y " + (12 - correctas) + " incorrectas";
 
     }
 

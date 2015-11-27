@@ -27,6 +27,7 @@ public class VerdaderoFalso extends AppCompatActivity {
     public int resultado;
     public Context contexto;
     public ListView lista;
+    boolean terminar = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,40 +44,53 @@ public class VerdaderoFalso extends AppCompatActivity {
         botonEvaluar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*resultado = evaluar(datosVerdaderoFalsos);
 
-                if (resultado == -1) {
-                    //existen preguntas sin contestar
-                    Toast.makeText(contexto,
-                            "Debes contestar todas las preguntas",
-                            Toast.LENGTH_LONG).show();
+                if (terminar) {
+                    Intent intent = new Intent(VerdaderoFalso.this, DragAndDrop.class);
+                    startActivity(intent);
+                    finish();
                 } else {
-                    int incorrectas = datosVerdaderoFalsos.size() - resultado;
-                    Toast.makeText(contexto,
-                            "Tienes "
-                                    + resultado
-                                    + " respuestas correctas y "
-                                    + incorrectas
-                                    + " incorrectas",
-                            Toast.LENGTH_LONG).show();
-                }*/
 
-                Intent intent = new Intent(VerdaderoFalso.this, DragAndDrop.class);
-                startActivity(intent);
+                    resultado = evaluar(datosVerdaderoFalsos);
+
+                    if (resultado == -1) {
+                        //existen preguntas sin contestar
+                        Toast.makeText(contexto,
+                                "Debes contestar todas las preguntas",
+                                Toast.LENGTH_LONG).show();
+                    } else {
+                        int incorrectas = datosVerdaderoFalsos.size() - resultado;
+                        Toast.makeText(contexto,
+                                "Tienes "
+                                        + resultado
+                                        + " respuestas correctas y "
+                                        + incorrectas
+                                        + " incorrectas",
+                                Toast.LENGTH_LONG).show();
+
+                        terminar = true;
+                        botonEvaluar.setText("Terminar");
+                    }
+
+
+                }
+
             }
         });
 
         //Datos
         datosVerdaderoFalsos = new ArrayList<>();
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 1", false, false, true));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 2", false, false, false));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 3", false, false, true));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 4", false, false, false));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Aprender una lengua desarrolla las habiliades cognitivas de la persona", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("El francés se habla en los 5 continentes", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("La francofonia representa el conjunto de personas que hablan lenguas provenientes del latín (español, francés, italiano, portugués).)", false, false, false));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("En el francés existe la letra ñ como en el español", false, false, false));
 
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 1", false, false, true));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 2", false, false, false));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 3", false, false, true));
-        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 4", false, false, false));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("No sólo se habla el francés en Francia", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("El alfabeto español y el inglés son iguales, excepto por algunos cambios", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Después del alemán y el inglés, el francés es la tercera lengua más usada en internet", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("En el mundo el francés es hablado por menos de 100 millones de personas", false, false, false));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Francia es el país más visitado en el mundo", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("En el ingés más del 50% del vocabulario ha sido aportado por el francés", false, false, true));
 
 
 
@@ -179,6 +193,8 @@ public class VerdaderoFalso extends AppCompatActivity {
             TextView txtTitle = (TextView) rowView.findViewById(R.id.texto_pregunta);
             final CheckBox checkBoxVerdadero = (CheckBox) rowView.findViewById(R.id.check_verdadero);
             final CheckBox checkBoxFalso = (CheckBox) rowView.findViewById(R.id.check_falso);
+
+            txtTitle.setText(datosVerdaderoFalsos.get(position).getTexto());
 
             checkBoxVerdadero.setOnClickListener(new View.OnClickListener() {
                 @Override

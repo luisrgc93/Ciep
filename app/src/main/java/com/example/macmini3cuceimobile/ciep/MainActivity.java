@@ -54,6 +54,7 @@ import java.util.StringTokenizer;
 public class MainActivity extends AppCompatActivity {
     FragmentTransaction Ft;
     DialogoImagen DI;
+    boolean juegos = true;
     private final String NAMESPACE = "http://webservice/Logon.wsdl";
     private final String URL = "http://148.202.105.181/WebServiceLogon/WebServiceLogon";
     private final String SOAP_ACTION = "http://webservice/Logon.wsdl/valida";
@@ -1779,11 +1780,11 @@ public class MainActivity extends AppCompatActivity {
         }
         if(ventana_administraciondeltiempo == 2)
         {
-            setContentView(R.layout.pantalla2_administraciondeltiempo);
+           // setContentView(R.layout.pantalla2_administraciondeltiempo);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/ilustracion2_pantalla2_administraciondeltiempo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            imagen2_pantalla2_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla2_administraciondeltiempo);
+           // imagen2_pantalla2_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla2_administraciondeltiempo);
             imagen2_pantalla2_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -14599,6 +14600,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.siguiente_pantalla19_frances:
                 ventana_frances++;
+                juegos = true;
                 validaVentana1();
                 break;
             case R.id.anterior_pantalla20_frances:
@@ -14606,13 +14608,17 @@ public class MainActivity extends AppCompatActivity {
                 validaVentana1();
                 break;
             case R.id.siguiente_pantalla20_frances:
-                Intent intent = new Intent(MainActivity.this,VerdaderoFalso.class);
-                startActivity(intent);
                 ventana_frances++;
                 validaVentana1();
+                if (juegos) {
+                    Intent intent = new Intent(MainActivity.this,VerdaderoFalso.class);
+                    startActivity(intent);
+                    juegos = false;
+                }
                 break;
             case R.id.anterior_pantalla21_frances:
                 ventana_frances--;
+                juegos = true;
                 validaVentana1();
                 break;
             case R.id.siguiente_pantalla21_frances:
@@ -14639,7 +14645,7 @@ public class MainActivity extends AppCompatActivity {
                 validaVentana3();
                 getSupportActionBar().setSubtitle("Aprendiendo a gestionar mi tiempo");
                 break;
-            case R.id.anterior_pantalla2_administraciondeltiempo:
+           /* case R.id.anterior_pantalla2_administraciondeltiempo:
                 ventana_administraciondeltiempo--;
                 validaVentana3();
                 getSupportActionBar().setSubtitle("Administracion del timepo");
@@ -14647,7 +14653,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.siguiente_pantalla2_administraciondeltiempo:
                 ventana_administraciondeltiempo++;
                 validaVentana3();
-                break;
+                break;*/
             case R.id.anterior_pantalla3_administraciondeltiempo:
                 ventana_administraciondeltiempo--;
                 validaVentana3();
