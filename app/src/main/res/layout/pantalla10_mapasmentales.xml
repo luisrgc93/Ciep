@@ -13,7 +13,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/scrollView3"
-            android:layout_weight="3" >
+            android:layout_weight="2" >
 
             <LinearLayout
                 android:orientation="vertical"
@@ -21,11 +21,6 @@
                 android:layout_height="match_parent"
                 android:weightSum="20"
                 android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imagen1_pantalla2_mapasmentales" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,9 +37,14 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:weightSum="10"
-                    android:layout_weight="4.5">
+                    android:weightSum="20">
 
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5"></LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -115,6 +115,12 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5"></LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -125,7 +131,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="17"
+            android:layout_weight="18"
             android:weightSum="20" >
 
             <LinearLayout

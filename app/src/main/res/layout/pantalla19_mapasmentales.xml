@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" android:layout_width="fill_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="20">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/scrollView">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="20">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="9.5">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tema:\nMapas Mentales\n"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:paddingTop="15dp"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buzan, Tony, (2004), “Cómo crear mapas mentales”. España: Ediciones Urano. Obtenido de:"/>
 
-</LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="http://www.orientacionandujar.es/2013/07/04/como-crear-mapas-mentales-tony-buzan/buzan-tony-como-crear-mapas-mentales1/ \n"
+                        android:id="@+id/textView81"
+                        android:autoLink="web"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Gipuzcoa, “Curso básico de mapas mentales”. Obtenido de: "
+                        android:id="@+id/textView82" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="http://www.orientacionandujar.es/2013/07/04/como-crear-mapas-mentales-tony-buzan/curso-basico-de-mapas-mentales/ \n"
+                        android:id="@+id/textView83"
+                        android:autoLink="web"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Taller de mapas mentales: Herramientas para potenciar nuestra creatividad, “Seminario taller de Mapas Mentales de Tony Buzan”. Estrateus. Obtenido de:"
+                        android:id="@+id/textView84" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="http://www.orientacionandujar.es/2013/07/04/como-crear-mapas-mentales-tony-buzan/mapas-mentales_herramientas-para-potencias-nuestra-creatividad/ \n"
+                        android:id="@+id/textView85"
+                        android:autoLink="web"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="“Crear mapas mentales”. Obtenido de: "
+                        android:id="@+id/textView86" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="http://www.orientacionandujar.es/2013/07/04/como-crear-mapas-mentales-tony-buzan/crear-mapas-mentales/ \n"
+                        android:id="@+id/textView87"
+                        android:autoLink="web"/>
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="350dp"
+                        android:id="@+id/imagen1_pantalla19_mapasmentales"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="9.5">
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="18"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="4.5">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/Salir_mapasmentales"
+                android:onClick="onClick">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imagen2_pantalla19_mapasmentales"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="4.5"
+                ></LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>

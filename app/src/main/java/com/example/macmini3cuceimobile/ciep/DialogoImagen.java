@@ -50,7 +50,7 @@ public class DialogoImagen extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         View v = inflater.inflate(R.layout.dialogoibook, container, false);
         ImageView imageen = (ImageView) v.findViewById(R.id.ficha);
         File carga = Environment.getExternalStoragePublicDirectory(imagen);

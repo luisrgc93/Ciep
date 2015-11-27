@@ -67,8 +67,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:id="@+id/guia2"
-                    android:onClick="onClick">
+                    android:id="@+id/guia2">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -81,7 +80,8 @@
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:src="@drawable/guia2"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -97,7 +97,8 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="HABILIDADES ESCRITAS"
                             android:layout_gravity="center_horizontal"
-                            android:gravity="center_horizontal" />
+                            android:gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -154,8 +155,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:id="@+id/guia4"
-                    android:weightSum="10"
-                    android:onClick="onClick">
+                    android:weightSum="10">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -168,7 +168,8 @@
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:src="@drawable/guia4"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -184,7 +185,8 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="ESQUEMAS"
                             android:layout_gravity="center_horizontal"
-                            android:gravity="center_horizontal" />
+                            android:gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -201,8 +203,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:id="@+id/guia5"
-                    android:weightSum="10"
-                    android:onClick="onClick">
+                    android:weightSum="10">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -215,7 +216,8 @@
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:src="@drawable/guia5"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -231,7 +233,8 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="ESTRÉS ACADÉMICO"
                             android:layout_gravity="center_horizontal"
-                            android:gravity="center_horizontal" />
+                            android:gravity="center_horizontal"
+                            android:visibility="invisible" />
                     </LinearLayout>
                 </LinearLayout>
 

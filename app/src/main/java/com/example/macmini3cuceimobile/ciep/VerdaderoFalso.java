@@ -2,6 +2,7 @@ package com.example.macmini3cuceimobile.ciep;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -34,12 +35,15 @@ public class VerdaderoFalso extends AppCompatActivity {
         //contexto
         contexto = getApplicationContext();
 
+        //Se inicializa la lista
+        lista = (ListView) findViewById(R.id.lista_preguntas);
+
         //botón de evaluar
         botonEvaluar = (Button) findViewById(R.id.boton_evaluar);
         botonEvaluar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resultado = evaluar(datosVerdaderoFalsos);
+                /*resultado = evaluar(datosVerdaderoFalsos);
 
                 if (resultado == -1) {
                     //existen preguntas sin contestar
@@ -55,7 +59,10 @@ public class VerdaderoFalso extends AppCompatActivity {
                                     + incorrectas
                                     + " incorrectas",
                             Toast.LENGTH_LONG).show();
-                }
+                }*/
+
+                Intent intent = new Intent(VerdaderoFalso.this, DragAndDrop.class);
+                startActivity(intent);
             }
         });
 
@@ -66,7 +73,14 @@ public class VerdaderoFalso extends AppCompatActivity {
         datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 3", false, false, true));
         datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 4", false, false, false));
 
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 1", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 2", false, false, false));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 3", false, false, true));
+        datosVerdaderoFalsos.add(new DatosVerdaderoFalso("Pregunta 4", false, false, false));
 
+
+
+        lista.setAdapter(new AdaptadorVerdaderoFalso(this, R.layout.item_verdadero_falso,datosVerdaderoFalsos));
     }
 
     /**
@@ -132,15 +146,14 @@ public class VerdaderoFalso extends AppCompatActivity {
             if (datosVerdaderoFalso.getCorrecto() &&
                     (datosVerdaderoFalso.getVerdadero() == true)) {
                 correctos ++;
-            } else if ((datosVerdaderoFalso.getCorrecto() == false) &&
-                    (datosVerdaderoFalso.getFalso() == true)) {
+            } else if ((datosVerdaderoFalso.getFalso() == true) &&
+                    (datosVerdaderoFalso.getCorrecto() == false)) {
                 correctos ++;
-            } else if ((datosVerdaderoFalso.getCorrecto() == false) &&
+            } else if ((datosVerdaderoFalso.getVerdadero() == false) &&
                     (datosVerdaderoFalso.getFalso() == false)) {
                 //Si se retorna -1 quiere decir que faltan preguntas por contestar
                 return -1;
             }
-
         }
 
         return correctos;
@@ -167,11 +180,11 @@ public class VerdaderoFalso extends AppCompatActivity {
             final CheckBox checkBoxVerdadero = (CheckBox) rowView.findViewById(R.id.check_verdadero);
             final CheckBox checkBoxFalso = (CheckBox) rowView.findViewById(R.id.check_falso);
 
-            checkBoxVerdadero.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            checkBoxVerdadero.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                public void onClick(View view) {
 
-                    if (isChecked) {
+                    if (checkBoxVerdadero.isChecked()) {
                         datosVerdaderoFalsos.get(position).setVerdadero(true);
                         datosVerdaderoFalsos.get(position).setFalso(false);
                         checkBoxVerdadero.setChecked(true);
@@ -185,11 +198,11 @@ public class VerdaderoFalso extends AppCompatActivity {
                 }
             });
 
-            checkBoxFalso.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            checkBoxFalso.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                public void onClick(View view) {
 
-                    if (isChecked) {
+                    if (checkBoxFalso.isChecked()) {
                         datosVerdaderoFalsos.get(position).setFalso(true);
                         datosVerdaderoFalsos.get(position).setVerdadero(false);
                         checkBoxFalso.setChecked(true);
@@ -202,6 +215,19 @@ public class VerdaderoFalso extends AppCompatActivity {
                     }
                 }
             });
+
+            if ((datosVerdaderoFalsos.get(position).getFalso() == false) && (datosVerdaderoFalsos.get(position).getVerdadero() == false) ) {
+                //No hacer nada
+            } else {
+
+                if (datosVerdaderoFalsos.get(position).getVerdadero()) {
+                    checkBoxVerdadero.setChecked(true);
+                    checkBoxFalso.setChecked(false);
+                } else {
+                    checkBoxVerdadero.setChecked(false);
+                    checkBoxFalso.setChecked(true);
+                }
+            }
 
             return rowView;
         }

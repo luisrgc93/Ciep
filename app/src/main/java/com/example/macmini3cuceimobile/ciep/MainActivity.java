@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -313,6 +314,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen10_pantalla18_mapasmentales;
     ImageView imagen11_pantalla18_mapasmentales;
     ImageView imagen12_pantalla18_mapasmentales;
+    ImageView BotonSalir;
+    ImageView Creditos;
 
 
     //VARIABLES GUIA 8 DATOS NUMERICOS
@@ -729,6 +732,100 @@ public class MainActivity extends AppCompatActivity {
     ImageView imagen2_pantalla5_importanciadelingles;
     ImageView imagen3_pantalla5_importanciadelingles;
 
+    //VARIABLES GUIA 12 EXCEL AVANZADO
+    LinearLayout fondo1_pantalla1_excelavanzado;
+    int ventana_excelavanzado;
+    ImageView imagen1_pantalla1_excelavanzado;
+    ImageView imagen2_pantalla1_excelavanzado;
+    ImageView imagen1_pantalla2_excelavanzado;
+    ImageView imagen2_pantalla2_excelavanzado;
+    ImageView imagen3_pantalla2_excelavanzado;
+    ImageView imagen4_pantalla2_excelavanzado;
+    ImageView imagen1_pantalla3_excelavanzado;
+    ImageView imagen2_pantalla3_excelavanzado;
+    ImageView imagen3_pantalla3_excelavanzado;
+    ImageView siguiente_pantalla3_excelavanzado;
+    ImageView imagen1_pantalla4_excelavanzado;
+    ImageView imagen2_pantalla4_excelavanzado;
+    ImageView imagen3_pantalla4_excelavanzado;
+    ImageView anterior_pantalla4_excelavanzado;
+    ImageView imagen1_pantalla5_excelavanzado;
+    ImageView imagen2_pantalla5_excelavanzado;
+    ImageView imagen3_pantalla5_excelavanzado;
+    ImageView imagen4_pantalla5_excelavanzado;
+    ImageView imagen5_pantalla5_excelavanzado;
+    ImageView imagen6_pantalla5_excelavanzado;
+    ImageView anterior_pantalla5_excelavanzado;
+    ImageView imagen1_pantalla6_excelavanzado;
+    ImageView imagen2_pantalla6_excelavanzado;
+    ImageView imagen3_pantalla6_excelavanzado;
+    ImageView imagen4_pantalla6_excelavanzado;
+    ImageView imagen1_pantalla7_excelavanzado;
+    ImageView imagen2_pantalla7_excelavanzado;
+    ImageView imagen3_pantalla7_excelavanzado;
+    ImageView anterior_pantalla7_excelavanzado;
+    ImageView imagen1_pantalla8_excelavanzado;
+    ImageView imagen2_pantalla8_excelavanzado;
+    ImageView imagen3_pantalla8_excelavanzado;
+    ImageView imagen4_pantalla8_excelavanzado;
+    ImageView anterior_pantalla8_excelavanzado;
+    ImageView imagen1_pantalla9_excelavanzado;
+    ImageView imagen1_pantalla10_excelavanzado;
+    ImageView imagen2_pantalla10_excelavanzado;
+    ImageView imagen1_pantalla11_excelavanzado;
+    ImageView imagen2_pantalla11_excelavanzado;
+    ImageView imagen1_pantalla12_excelavanzado;
+    ImageView imagen2_pantalla12_excelavanzado;
+    ImageView imagen1_pantalla13_excelavanzado;
+    ImageView imagen2_pantalla13_excelavanzado;
+    ImageView imagen1_pantalla14_excelavanzado;
+    ImageView imagen2_pantalla14_excelavanzado;
+    ImageView imagen1_pantalla15_excelavanzado;
+    ImageView imagen2_pantalla15_excelavanzado;
+    ImageView imagen1_pantalla16_excelavanzado;
+    ImageView imagen2_pantalla16_excelavanzado;
+    ImageView imagen1_pantalla17_excelavanzado;
+    ImageView imagen2_pantalla17_excelavanzado;
+    ImageView imagen1_pantalla18_excelavanzado;
+    ImageView imagen2_pantalla18_excelavanzado;
+    ImageView imagen1_pantalla19_excelavanzado;
+    ImageView imagen2_pantalla19_excelavanzado;
+    ImageView imagen1_pantalla20_excelavanzado;
+    ImageView imagen2_pantalla20_excelavanzado;
+    ImageView imagen1_pantalla21_excelavanzado;
+    ImageView imagen2_pantalla21_excelavanzado;
+    ImageView imagen1_pantalla22_excelavanzado;
+    ImageView imagen2_pantalla22_excelavanzado;
+    ImageView imagen1_pantalla23_excelavanzado;
+    ImageView imagen2_pantalla23_excelavanzado;
+    ImageView imagen1_pantalla24_excelavanzado;
+    ImageView imagen2_pantalla24_excelavanzado;
+    ImageView imagen1_pantalla25_excelavanzado;
+    ImageView imagen2_pantalla25_excelavanzado;
+    ImageView imagen1_pantalla26_excelavanzado;
+    ImageView imagen2_pantalla26_excelavanzado;
+    ImageView imagen1_pantalla27_excelavanzado;
+    ImageView imagen2_pantalla27_excelavanzado;
+    ImageView imagen1_pantalla28_excelavanzado;
+    ImageView imagen2_pantalla28_excelavanzado;
+    ImageView imagen1_pantalla29_excelavanzado;
+    ImageView imagen2_pantalla29_excelavanzado;
+    ImageView imagen1_pantalla30_excelavanzado;
+    ImageView imagen2_pantalla30_excelavanzado;
+    ImageView imagen1_pantalla31_excelavanzado;
+    ImageView imagen2_pantalla31_excelavanzado;
+    ImageView imagen1_pantalla32_excelavanzado;
+    ImageView imagen2_pantalla32_excelavanzado;
+    ImageView imagen1_pantalla33_excelavanzado;
+    ImageView imagen1_pantalla34_excelavanzado;
+    ImageView siguiente_pantalla34_excelavanzado;
+    ImageView imagen1_pantalla35_excelavanzado;
+    ImageView siguiente_pantalla35_excelavanzado;
+    ImageView imagen1_pantalla36_excelavanzado;
+    ImageView siguiente_pantalla36_excelavanzado;
+    ImageView imagen1_pantalla37_excelavanzado;
+    ImageView comenzar_excelavanzado;
+
     Boolean mensaje9=false;
     Bitmap bm;
     BitmapDrawable bmDrawable;
@@ -739,8 +836,8 @@ public class MainActivity extends AppCompatActivity {
 
         fm = getSupportFragmentManager();
         super.onCreate(savedInstanceState);
-    }
 
+    }
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         this.menu=menu;
@@ -1020,9 +1117,7 @@ public class MainActivity extends AppCompatActivity {
             separa(linea);
             linea=null;
             confirmacion=false;
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             Log.i("Ficheros", "Error al leer fichero desde memoria interna");
         }
     }
@@ -1620,8 +1715,9 @@ public class MainActivity extends AppCompatActivity {
         }
         if(ventana_frances == 21)
         {
-            setContentView(R.layout.pantalla21_frances);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_siguiente_frances.zip");
+            //Verdaderofalso();
+
+           /* carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia1/boton_siguiente_frances.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
             boton_siguiente_frances = (ImageView) findViewById(R.id.boton_siguiente_frances);
@@ -1630,7 +1726,7 @@ public class MainActivity extends AppCompatActivity {
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
             boton_anterior_frances = (ImageView) findViewById(R.id.boton_anterior_frances);
-            boton_anterior_frances.setBackgroundDrawable(bmDrawable);
+            boton_anterior_frances.setBackgroundDrawable(bmDrawable);*/
         }
         if(ventana_frances == 22)
         {
@@ -2089,16 +2185,11 @@ public class MainActivity extends AppCompatActivity {
             bmDrawable = new BitmapDrawable(bm);
             imagen1_pantalla22_administraciondeltiempo = (ImageView) findViewById(R.id.imagen1_pantalla22_administraciondeltiempo);
             imagen1_pantalla22_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_siguiente_administraciondeltiempo.zip");
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_salir_administraciondeltiempo.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.boton_siguiente_administraciondeltiempo);
+            siguiente_administraciondeltiempo = (ImageView) findViewById(R.id.imagen2_pantalla22_administraciondeltiempo);
             siguiente_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia3/boton_anterior_administraciondeltiempo.zip");
-            bm = BitmapFactory.decodeFile(String.valueOf(carga));
-            bmDrawable = new BitmapDrawable(bm);
-            anterior_administraciondeltiempo = (ImageView) findViewById(R.id.boton_anterior_administraciondeltiempo);
-            anterior_administraciondeltiempo.setBackgroundDrawable(bmDrawable);
         }
     }
     public void validaVentana5(){
@@ -2176,12 +2267,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla3_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla3_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
         if(ventana_mapasmentales == 4){
@@ -2194,12 +2285,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla4_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla4_mapasentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2213,37 +2304,37 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla5_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla5_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
         if(ventana_mapasmentales == 6){
             setContentView(R.layout.pantalla6_mapasmentales);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilistracion1_pantalla6_mapasmentales.zip");
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla6_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla6_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla2_mapasmentales);
+            imagen1_pantalla6_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla6_mapasmentales);
             imagen1_pantalla6_mapasmentales.setImageBitmap(bm);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla6_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla6_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
         if(ventana_mapasmentales == 7){
             setContentView(R.layout.pantalla7_mapasmentales);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilistracion1_pantalla7_mapasmentales.zip");
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla7_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
             imagen1_pantalla7_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla7_mapasmentales);
@@ -2251,18 +2342,18 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla7_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla7_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
         if(ventana_mapasmentales == 8){
             setContentView(R.layout.pantalla8_mapasmentales);
-            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilistracion1_pantalla8_mapasmentales.zip");
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla8_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
             imagen1_pantalla8_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla8_mapasmentales);
@@ -2270,12 +2361,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla8_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla8_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2284,7 +2375,7 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla9_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla9_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla2_mapasmentales);
+            imagen1_pantalla9_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla9_mapasmentales);
             imagen1_pantalla9_mapasmentales.setImageBitmap(bm);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion2_pantalla9_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -2304,12 +2395,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla9_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla9_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2318,7 +2409,7 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla10_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            imagen1_pantalla10_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla2_mapasmentales);
+            imagen1_pantalla10_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla10_mapasmentales);
             imagen1_pantalla10_mapasmentales.setImageBitmap(bm);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion2_pantalla10_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -2338,12 +2429,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla10_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla10_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2357,12 +2448,12 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla11_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla11_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2371,17 +2462,17 @@ public class MainActivity extends AppCompatActivity {
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/ilustracion1_pantalla12_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            imagen_udg_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla2_mapasmentales);
+            imagen_udg_mapasmentales = (ImageView) findViewById(R.id.imagen1_pantalla12_mapasmentales);
             imagen_udg_mapasmentales.setImageBitmap(bm);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_siguiente_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_mapasmentales);
+            siguiente_mapasmentales = (ImageView) findViewById(R.id.boton_siguiente_pantalla12_mapasmentales);
             siguiente_mapasmentales.setBackgroundDrawable(bmDrawable);
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/boton_anterior_mapasmentales.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
             bmDrawable = new BitmapDrawable(bm);
-            anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
+            anterior_mapasmentales = (ImageView) findViewById(R.id.boton_anterior_pantalla12_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
 
@@ -2556,6 +2647,21 @@ public class MainActivity extends AppCompatActivity {
             anterior_mapasmentales = (ImageView) findViewById(R.id.anterior_mapasmentales);
             anterior_mapasmentales.setBackgroundDrawable(bmDrawable);
         }
+        if(ventana_mapasmentales == 19)
+        {
+            setContentView(R.layout.pantalla19_mapasmentales);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/creditos.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            Creditos = (ImageView) findViewById(R.id.imagen1_pantalla19_mapasmentales);
+            Creditos.setBackgroundDrawable(bmDrawable);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia6/BotonSalir.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            BotonSalir = (ImageView) findViewById(R.id.imagen2_pantalla19_mapasmentales);
+            BotonSalir.setBackgroundDrawable(bmDrawable);
+
+        }
     }
     public void validaVentana7(){
         if (ventana_importanciadelingles == 1) {
@@ -2662,7 +2768,8 @@ public class MainActivity extends AppCompatActivity {
                     Ft.addToBackStack(null);
                     DI = new DialogoImagen();
                     DI.setImagen(".estu@pp/guia7/ficha_ezpdf.zip");
-                    DI.show(fm,"dialog");               }
+                    DI.show(fm,"dialog");
+                }
             });
             carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia7/ibooks.zip");
             bm = BitmapFactory.decodeFile(String.valueOf(carga));
@@ -4720,6 +4827,549 @@ public class MainActivity extends AppCompatActivity {
             salir_forosvirtuales.setImageBitmap(bm);
         }
     }
+    //validar ventana guia 12
+    public void validaVentana12() {
+        if (ventana_excelavanzado == 1) {
+            setContentView(R.layout.pantalla1_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/fondo1_pantalla1_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            fondo1_pantalla1_excelavanzado = (LinearLayout) findViewById(R.id.fondo1_pantalla1_excelavanzado);
+            fondo1_pantalla1_excelavanzado.setBackgroundDrawable(bmDrawable);
+
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla1_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla1_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla1_excelavanzado);
+            imagen1_pantalla1_excelavanzado.setImageBitmap(bm);
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla1_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla1_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla1_excelavanzado);
+            imagen2_pantalla1_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/comenzar_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            bmDrawable = new BitmapDrawable(bm);
+            comenzar_excelavanzado = (ImageView) findViewById(R.id.comenzar_excelavanzado);
+            comenzar_excelavanzado.setBackgroundDrawable(bmDrawable);
+        }
+
+        if (ventana_excelavanzado == 2) {
+            setContentView(R.layout.pantalla2_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla2_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla2_excelavanzado);
+            imagen1_pantalla2_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla2_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla2_excelavanzado);
+            imagen2_pantalla2_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla2_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla2_excelavanzado);
+            imagen3_pantalla2_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen4_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen4_pantalla2_excelavanzado = (ImageView) findViewById(R.id.imagen4_pantalla2_excelavanzado);
+            imagen4_pantalla2_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 3) {
+            setContentView(R.layout.pantalla3_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla3_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla3_excelavanzado);
+            imagen1_pantalla3_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla3_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla3_excelavanzado);
+            imagen2_pantalla3_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla3_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla3_excelavanzado);
+            imagen3_pantalla3_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/siguiente_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            siguiente_pantalla3_excelavanzado = (ImageView) findViewById(R.id.siguiente_pantalla3_excelavanzado);
+            siguiente_pantalla3_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 4) {
+            setContentView(R.layout.pantalla4_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla4_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla4_excelavanzado);
+            imagen1_pantalla4_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla4_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla4_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla4_excelavanzado);
+            imagen2_pantalla4_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla4_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla4_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla4_excelavanzado);
+            imagen3_pantalla4_excelavanzado.setImageBitmap(bm);
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/boton_anterior_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            anterior_pantalla4_excelavanzado = (ImageView) findViewById(R.id.anterior_pantalla4_excelavanzado);
+            anterior_pantalla4_excelavanzado.setImageBitmap(bm);
+
+
+        }
+
+        if(ventana_excelavanzado==5)
+        {
+            setContentView(R.layout.pantalla5_excelavanzado);
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla2_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla5_excelavanzado);
+            imagen1_pantalla5_excelavanzado.setImageBitmap(bm);
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla5_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla5_excelavanzado);
+            imagen2_pantalla5_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla5_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla5_excelavanzado);
+            imagen3_pantalla5_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen4_pantalla5_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen4_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen4_pantalla5_excelavanzado);
+            imagen4_pantalla5_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen5_pantalla5_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen5_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen5_pantalla5_excelavanzado);
+            imagen5_pantalla5_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen6_pantalla5_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen6_pantalla5_excelavanzado = (ImageView) findViewById(R.id.imagen6_pantalla5_excelavanzado);
+            imagen6_pantalla5_excelavanzado.setImageBitmap(bm);
+
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/boton_anterior_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            anterior_pantalla5_excelavanzado = (ImageView) findViewById(R.id.anterior_pantalla5_excelavanzado);
+            anterior_pantalla5_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 6) {
+            setContentView(R.layout.pantalla6_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla6_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla6_excelavanzado);
+            imagen1_pantalla6_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla6_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla6_excelavanzado);
+            imagen2_pantalla6_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla6_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla6_excelavanzado);
+            imagen3_pantalla6_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen4_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen4_pantalla6_excelavanzado = (ImageView) findViewById(R.id.imagen4_pantalla6_excelavanzado);
+            imagen4_pantalla6_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 7) {
+            setContentView(R.layout.pantalla7_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla7_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla7_excelavanzado);
+            imagen1_pantalla7_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/x_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla7_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla7_excelavanzado);
+            imagen2_pantalla7_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/x_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla7_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla7_excelavanzado);
+            imagen3_pantalla7_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/boton_anterior_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            anterior_pantalla7_excelavanzado = (ImageView) findViewById(R.id.anterior_pantalla7_excelavanzado);
+            anterior_pantalla7_excelavanzado.setImageBitmap(bm);
+
+        }
+
+
+        if (ventana_excelavanzado == 8) {
+            setContentView(R.layout.pantalla8_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/filtrar_datos_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla8_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla8_excelavanzado);
+            imagen1_pantalla8_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/x_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla8_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla8_excelavanzado);
+            imagen2_pantalla8_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/x_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen3_pantalla8_excelavanzado = (ImageView) findViewById(R.id.imagen3_pantalla8_excelavanzado);
+            imagen3_pantalla8_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/x_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen4_pantalla8_excelavanzado = (ImageView) findViewById(R.id.imagen4_pantalla8_excelavanzado);
+            imagen4_pantalla8_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/boton_anterior_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            anterior_pantalla8_excelavanzado = (ImageView) findViewById(R.id.anterior_pantalla8_excelavanzado);
+            anterior_pantalla8_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 9) {
+            setContentView(R.layout.pantalla9_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/graficos_pastel_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla9_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla9_excelavanzado);
+            imagen1_pantalla9_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 10) {
+            setContentView(R.layout.pantalla10_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/actividad_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla10_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla10_excelavanzado);
+            imagen1_pantalla10_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla10_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla10_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla10_excelavanzado);
+            imagen2_pantalla10_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 11) {
+            setContentView(R.layout.pantalla11_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla11_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla11_excelavanzado);
+            imagen1_pantalla11_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla11_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla11_excelavanzado);
+            imagen2_pantalla11_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 12) {
+            setContentView(R.layout.pantalla12_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla12_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla12_excelavanzado);
+            imagen1_pantalla12_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen3_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla12_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla12_excelavanzado);
+            imagen2_pantalla12_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 13) {
+            setContentView(R.layout.pantalla13_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla13_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla13_excelavanzado);
+            imagen1_pantalla13_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen4_pantalla6_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla13_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla13_excelavanzado);
+            imagen2_pantalla13_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 14) {
+            setContentView(R.layout.pantalla14_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla14_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla14_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla14_excelavanzado);
+            imagen1_pantalla14_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla14_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla14_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla14_excelavanzado);
+            imagen2_pantalla14_excelavanzado.setImageBitmap(bm);
+
+        }
+
+        if (ventana_excelavanzado == 15) {
+            setContentView(R.layout.pantalla15_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla15_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla15_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla15_excelavanzado);
+            imagen1_pantalla15_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla15_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla15_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla15_excelavanzado);
+            imagen2_pantalla15_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 16) {
+            setContentView(R.layout.pantalla16_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla16_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla16_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla16_excelavanzado);
+            imagen1_pantalla16_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla16_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla16_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla16_excelavanzado);
+            imagen2_pantalla16_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 17) {
+            setContentView(R.layout.pantalla17_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla17_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla17_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla17_excelavanzado);
+            imagen1_pantalla17_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla17_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla17_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla17_excelavanzado);
+            imagen2_pantalla17_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 18) {
+            setContentView(R.layout.pantalla18_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla18_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla18_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla18_excelavanzado);
+            imagen1_pantalla18_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla18_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla18_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla18_excelavanzado);
+            imagen2_pantalla18_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 19) {
+            setContentView(R.layout.pantalla19_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla19_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla19_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla19_excelavanzado);
+            imagen1_pantalla19_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla19_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla19_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla19_excelavanzado);
+            imagen2_pantalla19_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 20) {
+            setContentView(R.layout.pantalla20_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla20_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla20_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla20_excelavanzado);
+            imagen1_pantalla20_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla20_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla20_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla20_excelavanzado);
+            imagen2_pantalla20_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 21) {
+            setContentView(R.layout.pantalla21_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla21_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla21_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla21_excelavanzado);
+            imagen1_pantalla21_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla21_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla21_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla21_excelavanzado);
+            imagen2_pantalla21_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 22) {
+            setContentView(R.layout.pantalla22_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla22_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla22_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla22_excelavanzado);
+            imagen1_pantalla22_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla22_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla22_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla22_excelavanzado);
+            imagen2_pantalla22_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 23) {
+            setContentView(R.layout.pantalla23_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla23_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla23_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla23_excelavanzado);
+            imagen1_pantalla23_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla23_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla23_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla23_excelavanzado);
+            imagen2_pantalla23_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 24) {
+            setContentView(R.layout.pantalla24_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla24_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla24_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla24_excelavanzado);
+            imagen1_pantalla24_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla24_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla24_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla24_excelavanzado);
+            imagen2_pantalla24_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 23) {
+            setContentView(R.layout.pantalla23_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla23_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla23_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla23_excelavanzado);
+            imagen1_pantalla23_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla23_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla23_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla23_excelavanzado);
+            imagen2_pantalla23_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 24) {
+            setContentView(R.layout.pantalla24_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla24_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla24_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla24_excelavanzado);
+            imagen1_pantalla24_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla24_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla24_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla24_excelavanzado);
+            imagen2_pantalla24_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 25) {
+            setContentView(R.layout.pantalla25_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla25_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla25_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla25_excelavanzado);
+            imagen1_pantalla25_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla25_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla25_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla25_excelavanzado);
+            imagen2_pantalla25_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 26) {
+            setContentView(R.layout.pantalla26_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla26_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla26_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla26_excelavanzado);
+            imagen1_pantalla26_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla26_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla26_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla26_excelavanzado);
+            imagen2_pantalla26_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 27) {
+            setContentView(R.layout.pantalla27_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla27_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla27_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla27_excelavanzado);
+            imagen1_pantalla27_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla27_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla27_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla27_excelavanzado);
+            imagen2_pantalla27_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 28) {
+            setContentView(R.layout.pantalla28_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla28_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla28_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla28_excelavanzado);
+            imagen1_pantalla28_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla28_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla28_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla28_excelavanzado);
+            imagen2_pantalla28_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 29) {
+            setContentView(R.layout.pantalla29_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla29_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla29_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla29_excelavanzado);
+            imagen1_pantalla29_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla29_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla29_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla29_excelavanzado);
+            imagen2_pantalla29_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 30) {
+            setContentView(R.layout.pantalla30_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla30_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla30_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla30_excelavanzado);
+            imagen1_pantalla30_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla30_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla30_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla30_excelavanzado);
+            imagen2_pantalla30_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 31) {
+            setContentView(R.layout.pantalla31_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla31_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla31_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla31_excelavanzado);
+            imagen1_pantalla31_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla31_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla31_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla31_excelavanzado);
+            imagen2_pantalla31_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 32) {
+            setContentView(R.layout.pantalla32_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla32_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla32_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla32_excelavanzado);
+            imagen1_pantalla32_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen2_pantalla32_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen2_pantalla32_excelavanzado = (ImageView) findViewById(R.id.imagen2_pantalla32_excelavanzado);
+            imagen2_pantalla32_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 33) {
+            setContentView(R.layout.pantalla33_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla33_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla33_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla33_excelavanzado);
+            imagen1_pantalla33_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 34) {
+            setContentView(R.layout.pantalla34_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla34_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla34_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla34_excelavanzado);
+            imagen1_pantalla34_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/siguiente_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            siguiente_pantalla34_excelavanzado = (ImageView) findViewById(R.id.siguiente_pantalla34_excelavanzado);
+            siguiente_pantalla34_excelavanzado.setImageBitmap(bm);
+        }
+
+        if (ventana_excelavanzado == 35) {
+            setContentView(R.layout.pantalla35_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla35_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla35_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla35_excelavanzado);
+            imagen1_pantalla35_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/siguiente_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            siguiente_pantalla35_excelavanzado = (ImageView) findViewById(R.id.siguiente_pantalla35_excelavanzado);
+            siguiente_pantalla35_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 36) {
+            setContentView(R.layout.pantalla36_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla36_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla36_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla36_excelavanzado);
+            imagen1_pantalla36_excelavanzado.setImageBitmap(bm);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/siguiente_pantalla3_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            siguiente_pantalla36_excelavanzado = (ImageView) findViewById(R.id.siguiente_pantalla36_excelavanzado);
+            siguiente_pantalla36_excelavanzado.setImageBitmap(bm);
+        }
+        if (ventana_excelavanzado == 37) {
+            setContentView(R.layout.pantalla37_excelavanzado);
+            carga = Environment.getExternalStoragePublicDirectory(".estu@pp/guia12/imagen1_pantalla37_excelavanzado.zip");
+            bm = BitmapFactory.decodeFile(String.valueOf(carga));
+            imagen1_pantalla37_excelavanzado = (ImageView) findViewById(R.id.imagen1_pantalla37_excelavanzado);
+            imagen1_pantalla37_excelavanzado.setImageBitmap(bm);
+        }
+    }
+
+
+
 
     public Boolean validaVersion(){
         Boolean band=false;
@@ -6442,9 +7092,28 @@ public class MainActivity extends AppCompatActivity {
                 url = "https://dl.dropbox.com/s/fzc3hz1vaii6huf/xmind6.png?dl=0";
                 nomarchivo = "xmind6.zip";
                 descargar(rutaarchivos, url, nomarchivo);
+                url = "https://dl.dropbox.com/s/4kewbmb42xh1m90/BotonSalir.png?dl=0";
+                nomarchivo = "BotonSalir.zip";
+                descargar(rutaarchivos, url, nomarchivo);
+                url = "https://dl.dropbox.com/s/0r7v9hgnl83my2d/Creditos.png?dl=0";
+                nomarchivo = "Creditos.zip";
+                descargar(rutaarchivos, url, nomarchivo);
+
             }
             else
             {
+                url = "https://dl.dropbox.com/s/4kewbmb42xh1m90/BotonSalir.png?dl=0";
+                nomarchivo = "BotonSalir.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
+                url = "https://dl.dropbox.com/s/0r7v9hgnl83my2d/Creditos.png?dl=0";
+                nomarchivo = "Creditos.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
                 url = "https://dl.dropbox.com/s/43m3ao7jadcqkxn/bienvenida_mapasmentales.png?dl=0";
                 nomarchivo = "bienvenida_mapasmentales.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -6704,6 +7373,13 @@ public class MainActivity extends AppCompatActivity {
             rutaarchivos="/.estu@pp/guia7/";
             dir = Environment.getExternalStoragePublicDirectory(rutaarchivos);
             if (!dir.exists()) {
+
+                url = "https://dl.dropbox.com/s/g755j63nztzcrve/ficha_binaurality.png?dl=0";
+                nomarchivo = "ficha_binaurality";
+                descargar(rutaarchivos, url, nomarchivo);
+                url = "https://dl.dropbox.com/s/b56rfuhgrrl4e6d/ficha_wilingua.png?dl=0";
+                nomarchivo = "ficha_wilingua";
+                descargar(rutaarchivos, url, nomarchivo);
                 url = "https://dl.dropbox.com/s/qwr4kdqbomnrt8v/aldiko.png?dl=0";
                 nomarchivo = "aldiko.zip";
                 descargar(rutaarchivos, url, nomarchivo);
@@ -6859,6 +7535,20 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
+                url = "https://dl.dropbox.com/s/g755j63nztzcrve/ficha_binaurality.png?dl=0";
+                nomarchivo = "ficha_binaurality.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
+
+                url = "https://dl.dropbox.com/s/b56rfuhgrrl4e6d/ficha_wilingua.png?dl=0";
+                nomarchivo = "ficha_wilingua.zip";
+                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                if (!dir.exists()) {
+                    descargar(rutaarchivos, url, nomarchivo);
+                }
+
                 url = "https://dl.dropbox.com/s/qwr4kdqbomnrt8v/aldiko.png?dl=0";
                 nomarchivo = "aldiko.zip";
                 dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
@@ -8342,7 +9032,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if(numguia==11) {
-            rutaarchivos="/.estu@pp/guia11/";
+            rutaarchivos = "/.estu@pp/guia11/";
             dir = Environment.getExternalStoragePublicDirectory(rutaarchivos);
             if (!dir.exists()) {
                 url = "https://dl.dropbox.com/s/51nlkg8w5n1q0sg/barra_negra_botones_forosvirtuales.png?dl=0";
@@ -8435,191 +9125,931 @@ public class MainActivity extends AppCompatActivity {
                 url = "https://dl.dropbox.com/s/wrpbkhtokxxmyp8/texto_siguiente_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_siguiente_forosvirtuales.zip";
                 descargar(rutaarchivos, url, nomarchivo);
-            }
-            else{
+            } else {
                 url = "https://dl.dropbox.com/s/51nlkg8w5n1q0sg/barra_negra_botones_forosvirtuales.png?dl=0";
                 nomarchivo = "barra_negra_botones_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/cec97l94ychp1wf/bienvenida_forosvirtuales.png?dl=0";
                 nomarchivo = "bienvenida_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/kpczn53cztvym1m/boton_anterior_forosvirtuales.png?dl=0";
                 nomarchivo = "boton_anterior_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/ubgx7wkiixyv6yy/boton_salir_forosvirtuales.png?dl=0";
                 nomarchivo = "boton_salir_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/ev5st26dh8dcv9c/boton_siguiente_forosvirtuales.png?dl=0";
                 nomarchivo = "boton_siguiente_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/bqt6hzfh93xaggu/comenzar_forosvirtuales.png?dl=0";
                 nomarchivo = "comenzar_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/6u2l7bru21z8x6w/ilustracion_pantalla4_forosvirtuales.png?dl=0";
                 nomarchivo = "ilustracion_pantalla4_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/6u7scsbs5w5d02k/ilustracion_pantalla5_forosvirtuales.png?dl=0";
                 nomarchivo = "ilustracion_pantalla5_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/8hcrig9d0thorn4/ilustracion_pantalla7_forosvirtuales.png?dl=0";
                 nomarchivo = "ilustracion_pantalla7_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/40pay9f3zwsfelz/ilustracion_pantalla10_forosvirtuales.png?dl=0";
                 nomarchivo = "ilustracion_pantalla10_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/zly7rxtalw0yl5c/menu_pantalla2_forosvirtuales.png?dl=0";
                 nomarchivo = "menu_pantalla2_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/rwn4o8pxmgbkvxe/panal_superior_forosvirtuales.png?dl=0";
                 nomarchivo = "panel_superior_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/8b01iy45lekzlyw/portada_forosvirtuales.png?dl=0";
                 nomarchivo = "portada_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/go2rhp3wsn7i46w/texto_anterior_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_anterior_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/4a0iavgf3i5d537/texto_pantalla2_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla2_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/efgqmw78t86ba09/texto_pantalla3_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla3_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/au9aq7q1suamog9/texto_pantalla4_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla4_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/6zh1azigr43flak/texto_pantalla5_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla5_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/fi70lhgl0igfu94/texto_pantalla6_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla6_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/ic4jnm6bnmxjinz/texto_pantalla7_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla7_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/5ouzeywt3b4nodc/texto_pantalla8_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla8_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/o22mungvh2y3ri3/texto_pantalla9_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla9_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/rytcqnbw1t83onu/texto_pantalla10_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla10_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/p6alq3s8ku7lr21/texto_pantalla11_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla11_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/f4sfe4j35bsdhtk/texto_pantalla12_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla12_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/g53sjhxw9bofoj1/texto_pantalla13_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla13_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/boewxlnno8g0teb/texto_pantalla14_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla14_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/u93i5fd0lbqpjbl/texto_pantalla15_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla15_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/p68v6eick7gajra/texto_pantalla16_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_pantalla16_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
                 url = "https://dl.dropbox.com/s/wrpbkhtokxxmyp8/texto_siguiente_forosvirtuales.png?dl=0";
                 nomarchivo = "texto_siguiente_forosvirtuales.zip";
-                dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
                 if (!dir.exists()) {
                     descargar(rutaarchivos, url, nomarchivo);
                 }
             }
             return true;
         }
+            //descargar archivos de la guia 12
+            if (numguia == 12) {
+                rutaarchivos = "/.estu@pp/guia12/";
+                dir = Environment.getExternalStoragePublicDirectory(rutaarchivos);
+                if (!dir.exists()) {
+
+                    url = "https://dl.dropbox.com/s/e9zj78stn1o9d8x/boton%20comencemos%20alta.png?dl=0";
+                    nomarchivo = "comenzar_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/4sg18rwi0zw2q2p/imagen%20bienvenida%201%20alta.png?dl=0";
+                    nomarchivo = "fondo1_pantalla1_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/514t5s3rnzt33bf/ilustracion%20alta.png?dl=0";
+                    nomarchivo = "imagen1_pantalla1_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/up5st74kngvbfr2/bienvenida_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla1_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/95yato02hogu9a9/imagen1.png?dl=0";
+                    nomarchivo = "imagen1_pantalla2_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/utr5u8uxli6u26t/imagen2.png?dl=0";
+                    nomarchivo = "imagen2_pantalla2_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/5sr844j0gl73fy1/imagen3.png?dl=0";
+                    nomarchivo = "imagen3_pantalla2_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/gbff01dkzmgvho6/imagen4.png?dl=0";
+                    nomarchivo = "imagen4_pantalla2_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/bjid2kwiqe9g4hu/imagen2_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla3_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/3ne1hj4iu57niy0/imagen3_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla3_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/p904w2dfua1etho/siguiente_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "siguiente_pantalla3_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                    url = "https://dl.dropbox.com/s/avjd3f0esnkthhu/imagen2_pantalla4_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla4_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/zu02sulkg1k00v7/imagen3_pantalla4_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/y73qqmtb6r5az43/boton_anterior.png?dl=0";
+                    nomarchivo = "boton_anterior_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                    url = "https://dl.dropbox.com/s/3hii3ny37uate0q/funciones.png?dl=0";
+                    nomarchivo = "imagen2_pantalla5_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/cgh2t50mfzumxd0/referencias.png?dl=0";
+                    nomarchivo = "imagen3_pantalla5_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/r8qc8ui8duyapq4/filtrar.png?dl=0";
+                    nomarchivo = "imagen4_pantalla5_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/olmgewls4exus6y/graficos.png?dl=0";
+                    nomarchivo = "imagen5_pantalla5_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/jkfqp738xjceimw/actividad.png?dl=0";
+                    nomarchivo = "imagen6_pantalla5_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                    url = "https://dl.dropbox.com/s/u3b7bok0803kodn/imagen1_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla6_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/3cruubfk65cmdhh/imagen2_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla6_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/cictl2o00m45n9i/imagen3_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla6_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/7arnonqhu8c2zy2/imagen4_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen4_pantalla6_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/8y3zko0hevhkn0b/x_excelavanzado.png?dl=0";
+                    nomarchivo = "x_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/vdlbtithatouui0/filtrar_datos.png?dl=0";
+                    nomarchivo = "filtrar_datos_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/2h9qhee5agnuubo/graficos_pastel.png?dl=0";
+                    nomarchivo = "graficos_pastel_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/54ibhbqmpjrw9n0/actividad_excelavanzado.png?dl=0";
+                    nomarchivo = "actividad_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/hd0vpavn5knyzl5/imagen2_pantalla10_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla10_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/gxntqz4mfcg9crg/imagen1_pantalla14_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla14_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/vwnichkg9acqhjb/imagen2_pantalla14_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla14_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/t799qrpdljj9shj/imagen1_pantalla15_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla15_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/9khz5rlabupqj0l/imagen2_pantalla15_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla15_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/6j8584u38bfnpqp/imagen1_pantalla16_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla16_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/sy89wusi7phllmo/imagen2_pantalla16_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla16_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/5xwzzdqvyzjetui/imagen1_pantalla17_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla17_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/57z0jgj0fer8xho/imagen2_pantalla17_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla17_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/ddvz5a5xdxrhh8u/imagen1_pantalla18_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla18_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/tm4p0ryafcaefoh/imagen2_pantalla18_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla18_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/idavg8svlcm1ujd/imagen1_pantalla19_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla19_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/zwtcikswop42qlq/imagen2_pantalla19_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla19_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/k654wy8j3hpqtvh/imagen1_pantalla20_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla20_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/2oalx8n22a3ytl2/imagen2_pantalla20_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla20_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/kk97w4o2uraecdu/imagen1_pantalla21_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla21_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/empb81e201lpv6x/imagen2_pantalla21_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla21_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/0beotbbubh0jgzd/imagen1_pantalla22_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla22_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/af5okyt9wk2btyk/imagen2_pantalla22_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla22_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/703ipluvzkmlvyn/imagen1_pantalla23_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla23_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/4feoe58xp93arfc/imagen2_pantalla23_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla23_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/jzkm231nqnvi8u0/imagen1_pantalla24_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla24_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/43bbhyc0pqqslr7/imagen2_pantalla24_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla24_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                    url = "https://dl.dropbox.com/s/fbdxcjojlsbuwot/imagen1_pantalla25_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla25_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/17i67y9x08s3o89/imagen2_pantalla25_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla25_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/f0u1sugduz98225/imagen1_pantalla26_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla26_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/wxdddy9yg2knlca/imagen2_pantalla26_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla26_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/3tknknm5ipgu9cy/imagen1_pantalla27_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla27_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/n1ui91dv2qgemr8/imagen2_pantalla27_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla27_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/wstzipz27054683/imagen1_pantalla28_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla28_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/6jnito39pilcqbh/imagen2_pantalla28_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla28_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/nlz2rxb9rh2ya5r/imagen1_pantalla29_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla29_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/1r2i2nh9sduvruf/imagen2_pantalla29_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla29_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/14foxn3cl9kdmub/imagen1_pantalla30_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla30_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/ygxz2nk5jatvzgs/imagen2_pantalla30_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla30_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/fst39xsmqx4z6v6/imagen1_pantalla31_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla31_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/y0roufb1fw5ncqa/imagen2_pantalla31_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla31_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/5rn9iel3ud5jzid/imagen1_pantalla32_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla32_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+                    url = "https://dl.dropbox.com/s/le8u71tge181185/imagen2_pantalla32_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla32_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/397qugrqrydfneh/imagen1_pantalla33_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla33_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/2eyt49d99sqrg35/imagen1_pantalla34_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla34_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                    url = "https://dl.dropbox.com/s/m9kak1ymxifqftp/imagen1_pantalla35_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla35_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/96keij8vbl8i3e8/imagen1_pantalla36_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla36_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+                    url = "https://dl.dropbox.com/s/82d3iz6a13gvg52/imagen1_pantalla37_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla37_excelavanzado.zip";
+                    descargar(rutaarchivos, url, nomarchivo);
+
+
+                } else {
+                    url = "https://dl.dropbox.com/s/e9zj78stn1o9d8x/boton%20comencemos%20alta.png?dl=0";
+                    nomarchivo = "comenzar_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/4sg18rwi0zw2q2p/imagen%20bienvenida%201%20alta.png?dl=0";
+                    nomarchivo = "fondo1_pantalla1_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/514t5s3rnzt33bf/ilustracion%20alta.png?dl=0";
+                    nomarchivo = "imagen1_pantalla1_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/up5st74kngvbfr2/bienvenida_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla1_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/95yato02hogu9a9/imagen1.png?dl=0";
+                    nomarchivo = "imagen1_pantalla2_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/utr5u8uxli6u26t/imagen2.png?dl=0";
+                    nomarchivo = "imagen2_pantalla2_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/5sr844j0gl73fy1/imagen3.png?dl=0";
+                    nomarchivo = "imagen3_pantalla2_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/gbff01dkzmgvho6/imagen4.png?dl=0";
+                    nomarchivo = "imagen4_pantalla2_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+
+                    url = "https://dl.dropbox.com/s/bjid2kwiqe9g4hu/imagen2_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla3_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/3ne1hj4iu57niy0/imagen3_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla3_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/p904w2dfua1etho/siguiente_pantalla3_excelavanzado.png?dl=0";
+                    nomarchivo = "siguiente_pantalla3_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/avjd3f0esnkthhu/imagen2_pantalla4_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla4_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/zu02sulkg1k00v7/imagen3_pantalla4_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla4_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/y73qqmtb6r5az43/boton_anterior.png?dl=0";
+                    nomarchivo = "boton_anterior_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+
+                    url = "https://dl.dropbox.com/s/3hii3ny37uate0q/funciones.png?dl=0";
+                    nomarchivo = "imagen2_pantalla5_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/cgh2t50mfzumxd0/referencias.png?dl=0";
+                    nomarchivo = "imagen3_pantalla5_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/r8qc8ui8duyapq4/filtrar.png?dl=0";
+                    nomarchivo = "imagen4_pantalla5_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/olmgewls4exus6y/graficos.png?dl=0";
+                    nomarchivo = "imagen5_pantalla5_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/jkfqp738xjceimw/actividad.png?dl=0";
+                    nomarchivo = "imagen6_pantalla5_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/u3b7bok0803kodn/imagen1_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla6_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/3cruubfk65cmdhh/imagen2_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla6_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/cictl2o00m45n9i/imagen3_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen3_pantalla6_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/7arnonqhu8c2zy2/imagen4_pantalla6_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen4_pantalla6_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/8y3zko0hevhkn0b/x_excelavanzado.png?dl=0";
+                    nomarchivo = "x_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+
+                    url = "https://dl.dropbox.com/s/vdlbtithatouui0/filtrar_datos.png?dl=0";
+                    nomarchivo = "filtrar_datos_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/2h9qhee5agnuubo/graficos_pastel.png?dl=0";
+                    nomarchivo = "graficos_pastel_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/54ibhbqmpjrw9n0/actividad_excelavanzado.png?dl=0";
+                    nomarchivo = "actividad_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/hd0vpavn5knyzl5/imagen2_pantalla10_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla10_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/gxntqz4mfcg9crg/imagen1_pantalla14_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla14_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/vwnichkg9acqhjb/imagen2_pantalla14_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla14_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/t799qrpdljj9shj/imagen1_pantalla15_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla15_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/9khz5rlabupqj0l/imagen2_pantalla15_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla15_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/6j8584u38bfnpqp/imagen1_pantalla16_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla16_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/sy89wusi7phllmo/imagen2_pantalla16_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla16_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/5xwzzdqvyzjetui/imagen1_pantalla17_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla17_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/57z0jgj0fer8xho/imagen2_pantalla17_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla17_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/ddvz5a5xdxrhh8u/imagen1_pantalla18_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla18_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/tm4p0ryafcaefoh/imagen2_pantalla18_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla18_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/idavg8svlcm1ujd/imagen1_pantalla19_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla19_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/zwtcikswop42qlq/imagen2_pantalla19_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla19_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/k654wy8j3hpqtvh/imagen1_pantalla20_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla20_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/2oalx8n22a3ytl2/imagen2_pantalla20_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla20_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/kk97w4o2uraecdu/imagen1_pantalla21_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla21_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/empb81e201lpv6x/imagen2_pantalla21_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla21_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/0beotbbubh0jgzd/imagen1_pantalla22_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla22_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/af5okyt9wk2btyk/imagen2_pantalla22_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla22_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/703ipluvzkmlvyn/imagen1_pantalla23_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla23_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/4feoe58xp93arfc/imagen2_pantalla23_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla23_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/jzkm231nqnvi8u0/imagen1_pantalla24_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla24_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/43bbhyc0pqqslr7/imagen2_pantalla24_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla24_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+
+                    url = "https://dl.dropbox.com/s/fbdxcjojlsbuwot/imagen1_pantalla25_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla25_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/17i67y9x08s3o89/imagen2_pantalla25_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla25_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/f0u1sugduz98225/imagen1_pantalla26_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla26_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/wxdddy9yg2knlca/imagen2_pantalla26_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla26_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/3tknknm5ipgu9cy/imagen1_pantalla27_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla27_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/n1ui91dv2qgemr8/imagen2_pantalla27_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla27_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/wstzipz27054683/imagen1_pantalla28_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla28_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/6jnito39pilcqbh/imagen2_pantalla28_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla28_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/nlz2rxb9rh2ya5r/imagen1_pantalla29_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla29_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/1r2i2nh9sduvruf/imagen2_pantalla29_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla29_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/14foxn3cl9kdmub/imagen1_pantalla30_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla30_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/ygxz2nk5jatvzgs/imagen2_pantalla30_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla30_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/fst39xsmqx4z6v6/imagen1_pantalla31_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla31_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/y0roufb1fw5ncqa/imagen2_pantalla31_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla31_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/5rn9iel3ud5jzid/imagen1_pantalla32_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla32_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    url = "https://dl.dropbox.com/s/le8u71tge181185/imagen2_pantalla32_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen2_pantalla32_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/397qugrqrydfneh/imagen1_pantalla33_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla33_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+
+                    url = "https://dl.dropbox.com/s/2eyt49d99sqrg35/imagen1_pantalla34_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla34_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/m9kak1ymxifqftp/imagen1_pantalla35_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla35_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/96keij8vbl8i3e8/imagen1_pantalla36_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla36_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+
+                    url = "https://dl.dropbox.com/s/82d3iz6a13gvg52/imagen1_pantalla37_excelavanzado.png?dl=0";
+                    nomarchivo = "imagen1_pantalla37_excelavanzado.zip";
+                    dir = Environment.getExternalStoragePublicDirectory(rutaarchivos + nomarchivo);
+                    if (!dir.exists()) {
+                        descargar(rutaarchivos, url, nomarchivo);
+                    }
+                    return true;
+                }
+
+            }
         return false;
     }
 
@@ -9239,6 +10669,19 @@ public class MainActivity extends AppCompatActivity {
         }
         if(numguia==6){
             rutaarchivos="/.estu@pp/guia6/";
+
+            nomarchivo = "Creditos.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists())
+            {
+                ar++;
+            }
+            nomarchivo = "BotonSalir.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists())
+            {
+                ar++;
+            }
             nomarchivo = "bienvenida_mapasmentales.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
             if(dir.exists()){
@@ -9455,6 +10898,19 @@ public class MainActivity extends AppCompatActivity {
             nomarchivo = "aldiko.zip";
             dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
             if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "ficha_wilingua.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists())
+            {
+                ar++;
+            }
+            nomarchivo = "ficha_binaurality.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists())
+            {
                 ar++;
             }
             nomarchivo = "babbel.zip";
@@ -10519,6 +11975,435 @@ public class MainActivity extends AppCompatActivity {
                 ar++;
             }
         }
+        //validar archivos guia 12
+        if(numguia==12){
+            rutaarchivos="/.estu@pp/guia12/";
+            nomarchivo = "comenzar_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "fondo1_pantalla1_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "imagen1_pantalla1_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "imagen2_pantalla1_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla2_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla2_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen3_pantalla2_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen4_pantalla2_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla3_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen3_pantalla3_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "siguiente_pantalla3_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla4_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen3_pantalla4_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+
+
+            nomarchivo = "boton_anterior_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla5_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen3_pantalla5_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen4_pantalla5_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen5_pantalla5_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen6_pantalla5_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla6_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "imagen2_pantalla6_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "imagen3_pantalla6_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+            nomarchivo = "imagen4_pantalla6_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "x_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "filtrar_datos_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "graficos_pastel_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+
+            nomarchivo = "actividad_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+
+            nomarchivo = "imagen2_pantalla10_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla14_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla14_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla15_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla15_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla16_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla16_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla17_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla17_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla18_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla18_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla19_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla19_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla20_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla20_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla21_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla21_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+
+            nomarchivo = "imagen1_pantalla22_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla22_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla23_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla23_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+
+            nomarchivo = "imagen1_pantalla24_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla24_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla25_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla25_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla26_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla26_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla27_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla27_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla28_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla28_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla29_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla29_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla30_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla30_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla31_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla31_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla32_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen2_pantalla32_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla33_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla34_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla35_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla36_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+
+            nomarchivo = "imagen1_pantalla37_excelavanzado.zip";
+            dir=Environment.getExternalStoragePublicDirectory(rutaarchivos+nomarchivo);
+            if(dir.exists()){
+                ar++;
+            }
+        }
         return ar;
     }
 
@@ -10649,11 +12534,11 @@ public class MainActivity extends AppCompatActivity {
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 42) {
+                        while (numar != 44) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 42) {
+                        if (numar == 44) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -10670,11 +12555,11 @@ public class MainActivity extends AppCompatActivity {
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 50) {
+                        while (numar != 52) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 50) {
+                        if (numar == 52) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -10775,6 +12660,28 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
+                if(numguia==12){
+                    mensaje(1);
+                    guia=true;
+                    descarga=dropbox();
+                    if(descarga==true){
+                        numar=validaArchivos();
+                        while(numar!=71){
+                            numar=validaArchivos();
+                        }
+                        mensaje(2);
+                        if(numar==71){
+                            try {
+                                titulo(numguia);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            ventana_excelavanzado=1;
+                            validaVentana12();
+                        }
+                    }
+                }
+
             }
         });
         alertDialog.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
@@ -10867,11 +12774,11 @@ public class MainActivity extends AppCompatActivity {
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 42) {
+                        while (numar != 44) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 42) {
+                        if (numar == 44) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -10888,11 +12795,11 @@ public class MainActivity extends AppCompatActivity {
                     descarga = dropbox();
                     if (descarga == true) {
                         numar = validaArchivos();
-                        while (numar != 50) {
+                        while (numar != 52) {
                             numar = validaArchivos();
                         }
                         mensaje(2);
-                        if (numar == 50) {
+                        if (numar == 52) {
                             try {
                                 titulo(numguia);
                             } catch (FileNotFoundException e) {
@@ -10990,6 +12897,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                             ventana_foros = 1;
                             validaVentana11();
+                        }
+                    }
+                }
+                if(numguia==12){
+                    mensaje(1);
+                    guia=true;
+                    descarga=dropbox();
+                    if(descarga==true){
+                        numar=validaArchivos();
+                        while(numar!=71){
+                            numar=validaArchivos();
+                        }
+                        mensaje(2);
+                        if(numar==71){
+                            try {
+                                titulo(numguia);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            ventana_excelavanzado=1;
+                            validaVentana12();
                         }
                     }
                 }
@@ -12201,7 +14129,7 @@ public class MainActivity extends AppCompatActivity {
                 numguia=6;
                 numar=0;
                 numar=validaArchivos();
-                if(numar==42){
+                if(numar==44){
                     guia=true;
                     titulo(numguia);
                     ventana_mapasmentales=1;
@@ -12215,11 +14143,11 @@ public class MainActivity extends AppCompatActivity {
                             descarga=dropbox();
                             if(descarga==true){
                                 numar=validaArchivos();
-                                while(numar!=42){
+                                while(numar!=44){
                                     numar=validaArchivos();
                                 }
                                 mensaje(2);
-                                if(numar==42){
+                                if(numar==44){
                                     titulo(numguia);
                                     ventana_mapasmentales=1;
                                     validaVentana6();
@@ -12245,7 +14173,7 @@ public class MainActivity extends AppCompatActivity {
                 numguia=7;
                 numar=0;
                 numar=validaArchivos();
-                if(numar==50){
+                if(numar==52){
                     guia=true;
                     titulo(numguia);
                     ventana_importanciadelingles=1;
@@ -12259,11 +14187,11 @@ public class MainActivity extends AppCompatActivity {
                             descarga=dropbox();
                             if(descarga==true){
                                 numar=validaArchivos();
-                                while(numar!=50){
+                                while(numar!=52){
                                     numar=validaArchivos();
                                 }
                                 mensaje(2);
-                                if(numar==50){
+                                if(numar==52){
                                     titulo(numguia);
                                     ventana_importanciadelingles=1;
                                     validaVentana7();
@@ -12477,9 +14405,51 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 break;
+            //caso guia 12
             case R.id.guia12:
-                Toast.makeText(MainActivity.this, "Aun no esta programado, CuceiMobile trabajando", Toast.LENGTH_SHORT).show();
-                break;
+                numguia=12;
+                numar=0;
+                numar=validaArchivos();
+                if(numar==71){
+                    guia=true;
+                    titulo(numguia);
+                    ventana_excelavanzado=1;
+                    validaVentana12();
+                }
+                else{
+                    if(estaConectado()){
+                        if(!conectadoRedMovil()){
+                            mensaje(1);
+                            guia=true;
+                            descarga=dropbox();
+                            if(descarga==true){
+                                numar=validaArchivos();
+                                while(numar!=71){
+                                    numar=validaArchivos();
+                                }
+                                mensaje(2);
+                                if(numar==71){
+                                    titulo(numguia);
+                                    ventana_excelavanzado=1;
+                                    validaVentana12();
+                                }
+                            }
+                        }
+                        else{
+                            if(validaVersion()==true){
+                                AlertaDatosDescargaMayor();
+                            }
+                            else{
+                                AlertaDatosDescargaMenor();
+                            }
+                        }
+                    }
+                    else{
+                        Toast.makeText(MainActivity.this, "No tienes una conexion de internet estable, porfavor accede a una para descargar el contenido", Toast.LENGTH_LONG).show();
+                        numguia=0;
+                    }
+                }
+            break;
             // BOTONES GUIA 1
             case R.id.comenzar_frances:
                 ventana_frances++;
@@ -12636,6 +14606,8 @@ public class MainActivity extends AppCompatActivity {
                 validaVentana1();
                 break;
             case R.id.siguiente_pantalla20_frances:
+                Intent intent = new Intent(MainActivity.this,VerdaderoFalso.class);
+                startActivity(intent);
                 ventana_frances++;
                 validaVentana1();
                 break;
@@ -12992,6 +14964,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.siguiente_pantalla18_mapasmentales:
                 ventana_mapasmentales++;
                 validaVentana6();
+                break;
+            case R.id.Salir_mapasmentales:
+                setContentView(R.layout.guias);
+                guia=false;
+                numguia = 0;
+                titulo(numguia);
                 break;
             //BOTONES GUIA 11 FOROS VIRTUALES
             case R.id.comenzar_forosvirtuales:
@@ -14283,6 +16261,228 @@ public class MainActivity extends AppCompatActivity {
                 numguia=0;
                 titulo(numguia);
                 break;
+            //caso dentro guia 12
+            case R.id.comenzar_excelavanzado:
+                ventana_excelavanzado++;
+                validaVentana12();
+                break;
+            case R.id.motivate_pantalla2_excelavanzado:
+                ventana_excelavanzado=3;
+                validaVentana12();
+                break;
+            case R.id.objetivos_pantalla2_excelavanzado:
+                ventana_excelavanzado=4;
+                validaVentana12();
+                break;
+
+            case R.id.siguiente_pantalla3_excelavanzado:
+                ventana_excelavanzado=4;
+                validaVentana12();
+                break;
+            case R.id.anterior_pantalla4_excelavanzado:
+                ventana_excelavanzado=2;
+                validaVentana12();
+                break;
+
+            case R.id.aprendiendo_pantalla2_excelavanzado:
+                ventana_excelavanzado=5;
+                validaVentana12();
+                break;
+
+            case R.id.anterior_pantalla5_excelavanzado:
+                ventana_excelavanzado=2;
+                validaVentana12();
+                break;
+
+
+            case R.id.funciones_pantalla5_excelavanzado:
+                ventana_excelavanzado=6;
+                validaVentana12();
+                break;
+
+            case R.id.referencias_pantalla5_excelavanzado:
+                ventana_excelavanzado=7;
+                validaVentana12();
+                break;
+
+
+            case R.id.filtrar_pantalla5_excelavanzado:
+                ventana_excelavanzado=8;
+                validaVentana12();
+                break;
+
+            case R.id.graficos_pantalla5_excelavanzado:
+                ventana_excelavanzado=9;
+                validaVentana12();
+                break;
+
+
+            case R.id.anterior_pantalla7_excelavanzado:
+                ventana_excelavanzado=6;
+                validaVentana12();
+                break;
+
+            case R.id.anterior_pantalla8_excelavanzado:
+                ventana_excelavanzado=5;
+                validaVentana12();
+                break;
+
+            case R.id.actividad_pantalla5_excelavanzado:
+                ventana_excelavanzado=10;
+                validaVentana12();
+                break;
+
+            case R.id.funcionestexto_pantalla6_excelavanzado:
+                ventana_excelavanzado=11;
+                validaVentana12();
+                break;
+
+            case R.id.funcioneslogicas_pantalla6_excelavanzado:
+                ventana_excelavanzado=12;
+                validaVentana12();
+                break;
+
+            case R.id.funcionesmatenaticas_pantalla6_excelavanzado:
+                ventana_excelavanzado=13;
+                validaVentana12();
+                break;
+
+            case R.id.concatenar_pantalla11_excelavanzado:
+
+                ventana_excelavanzado=14;
+                validaVentana12();
+                break;
+
+            case R.id.encontrar_pantalla11_excelavanzado:
+                ventana_excelavanzado=15;
+                validaVentana12();
+                break;
+
+            case R.id.funcion_SI_pantalla12_excelavanzado:
+                ventana_excelavanzado=16;
+                validaVentana12();
+                break;
+
+            case R.id.funcion_O_pantalla12_excelavanzado:
+
+                ventana_excelavanzado=17;
+                validaVentana12();
+                break;
+
+
+            case R.id.funcion_Y_pantalla12_excelavanzado:
+
+                ventana_excelavanzado=18;
+                validaVentana12();
+                break;
+
+            case R.id.redondear_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=19;
+                validaVentana12();
+                break;
+
+            case R.id.sumar_si_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=20;
+                validaVentana12();
+                break;
+
+            case R.id.residuo_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=21;
+                validaVentana12();
+                break;
+
+            case R.id.aleatorio_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=22;
+                validaVentana12();
+                break;
+
+            case R.id.contar_SI_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=23;
+                validaVentana12();
+                break;
+
+
+            case R.id.moda_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=25;
+                validaVentana12();
+                break;
+
+            case R.id.mediana_pantalla13_excelavanzado:
+
+                ventana_excelavanzado=26;
+                validaVentana12();
+                break;
+
+            case R.id.estilo_pantalla7_excelavanzado:
+
+                ventana_excelavanzado=27;
+                validaVentana12();
+                break;
+
+            case R.id.diferencia_pantalla7_excelavanzado:
+
+                ventana_excelavanzado=28;
+                validaVentana12();
+                break;
+
+
+
+            case R.id.filtrado_rapido_pantalla8_excelavanzado:
+
+                ventana_excelavanzado=29;
+                validaVentana12();
+                break;
+
+
+            case R.id.filtrar_texto_pantalla8_excelavanzado:
+                ventana_excelavanzado=30;
+                validaVentana12();
+                break;
+
+            case R.id.filtrar_color_pantalla8_excelavanzado:
+                ventana_excelavanzado=31;
+                validaVentana12();
+                break;
+
+
+            case R.id.crear_grafico_pantalla9_excelavanzado:
+                ventana_excelavanzado=32;
+                validaVentana12();
+                break;
+
+            case R.id.diseno_pantalla9_excelavanzado:
+                ventana_excelavanzado=33;
+                validaVentana12();
+                break;
+
+
+            case R.id.titulos_pantalla9_excelavanzado:
+                ventana_excelavanzado=34;
+                validaVentana12();
+                break;
+
+            case R.id.siguiente_pantalla34_excelavanzado:
+                ventana_excelavanzado=35;
+                validaVentana12();
+                break;
+
+            case R.id.siguiente_pantalla35_excelavanzado:
+                ventana_excelavanzado=36;
+                validaVentana12();
+                break;
+
+
+            case R.id.siguiente_pantalla36_excelavanzado:
+                ventana_excelavanzado=37;
+                validaVentana12();
+                break;
+
         }
     }
 }

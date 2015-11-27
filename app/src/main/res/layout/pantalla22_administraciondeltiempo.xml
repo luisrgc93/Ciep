@@ -61,30 +61,36 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="18"
-            android:weightSum="20"
+            android:weightSum="10"
             android:background="#fd7417">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="9.5" />
+                android:layout_weight="4.5" />
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:weightSum="10"
-                android:id="@+id/salir_administraciondeltiempo">
+                android:id="@+id/salir_administraciondeltiempo"
+                android:onClick="onClick">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/imagen2_pantalla22_administraciondeltiempo" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="9.5" />
+                android:layout_weight="4.5" />
         </LinearLayout>
 
     </LinearLayout>
